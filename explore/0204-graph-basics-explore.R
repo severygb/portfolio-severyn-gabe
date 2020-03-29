@@ -61,4 +61,4 @@ ggsave(filename = "figures/0204-graph-basics-gapminder.png",
        height = 7.5,
        units = "in", 
        dpi = 300)
-include_graphics("../figures/0204-graph-basics-gapminder.png")
+knitr::include_graphics("./figures/0204-graph-basics-gapminder.png")
