@@ -1,0 +1,70 @@
+---
+title: "Test Report"
+author: "Gabe Severyn"
+date: '`r format(Sys.time(), "%Y-%m-%d")`'
+output: github_document
+---
+
+```{r echo = FALSE}
+library("knitr")  
+library("ggplot2")
+library("graphclassmate")
+opts_knit$set(root.dir = "../")  
+opts_chunk$set(echo = FALSE) 
+
+library(dplyr)
+```
+
+## Introduction
+
+This display illustrat es the distribution of speeds attained by skiers
+in three downhill events in the 2012 Olympic Winter Games disaggregated
+by sex.
+
+## Requirements 
+
+This display meets the data requirements for D1 distributions
+
+- 250 observations 
+- One quantitative variable (speed) 
+- Two categorical variables: sex (2 levels) and event (3 levels)  
+
+This display also meets the following document requirements 
+
+- sports data limit (this display is one of two) 
+
+
+The following is a glimpse of StarWars characters.
+```{r}
+data(starwars, package = "dplyr")
+
+glimpse(starwars)
+
+
+starwars %>% select(films) %>% unlist() %>% unique()
+```
+
+
+Graph of worlds and number of characters all it home.
+```{r}
+starwars_worlds <- starwars %>% 
+    filter(!is.na(homeworld)) %>% 
+    select(homeworld) %>% 
+    count(homeworld) %>% 
+    filter(n > 1) %>% 
+    mutate(homeworld = forcats::fct_reorder(homeworld, n))
+
+ggplot(starwars_worlds, aes(x = n, y = homeworld)) +
+    geom_point(size = 1.5) +
+    labs(x = "Character count (for N > 1)", 
+       y = "", 
+       title = "Home worlds of Star Wars characters") + 
+    scale_x_continuous(breaks = seq(from = 2, to = 10, by = 2)) +
+    theme_graphclass()
+```
+
+This is the output of a separate R script.
+```{r}
+source("explore/0204-more-R-basics.R")
+```
+
