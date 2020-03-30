@@ -3,15 +3,19 @@ title: "Test Report"
 author: "Gabe Severyn"
 date: '`r format(Sys.time(), "%Y-%m-%d")`'
 output: github_document
+editor_options: 
+  chunk_output_type: console
 ---
 
 ```{r echo = FALSE}
-
 # ERROR: This chunk creates an output... Even though echo = false
+# the echo = FALSE in this code chunk header is necessary 
 library("knitr")  
 library("graphclassmate")
 library("tidyverse")
 opts_knit$set(root.dir = "../")
+
+# this setting applies to all subsequent code chunks, not this one
 opts_chunk$set(echo = FALSE) 
 ```
 
@@ -67,8 +71,10 @@ This is the output of a separate R script.
 ```{r}
 #source("./0204-more-R-basics.R")
 # I have  errors with relative paths, cannot find file. Using absolute path it works.
-source("C:/R/portfolio-severyn-gabe/explore/0204-more-R-basics.R")
+# source("C:/R/portfolio-severyn-gabe/explore/0204-more-R-basics.R")
 
+# In an R code chunk, using "source()", the working directory is the project top level
+source("explore/0204-more-R-basics.R")
 glimpse(df)
 
 ggplot(df, aes(x = x1, y = y1)) +
@@ -83,10 +89,18 @@ starwars_worlds %>%
     arrange(desc(n)) %>% 
     kable()
 ```
-## Try 
+
+
+-------------- Must have a space here before the heading line
+
+
+## Try include_graphics
+
+
 
 Bring it in...
+
 ```{r out.width = "10%"}
 # import an image from resources 
-knitr::include_graphics("../resources/Rlogo.png")
+include_graphics("../resources/Rlogo.png")
 ```
