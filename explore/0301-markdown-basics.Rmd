@@ -6,13 +6,13 @@ output: github_document
 ---
 
 ```{r echo = FALSE}
-library("knitr")  
-library("ggplot2")
-library("graphclassmate")
-opts_knit$set(root.dir = "../")  
-opts_chunk$set(echo = FALSE) 
 
-library(dplyr)
+# ERROR: This chunk creates an output... Even though echo = false
+library("knitr")  
+library("graphclassmate")
+library("tidyverse")
+opts_knit$set(root.dir = "../")
+opts_chunk$set(echo = FALSE) 
 ```
 
 ## Introduction
@@ -56,15 +56,37 @@ starwars_worlds <- starwars %>%
 
 ggplot(starwars_worlds, aes(x = n, y = homeworld)) +
     geom_point(size = 1.5) +
-    labs(x = "Character count (for N > 1)", 
-       y = "", 
-       title = "Home worlds of Star Wars characters") + 
+    labs(x = "Character count (for N > 1)",
+       y = "",
+       title = "Home worlds of Star Wars characters") +
     scale_x_continuous(breaks = seq(from = 2, to = 10, by = 2)) +
     theme_graphclass()
 ```
 
 This is the output of a separate R script.
 ```{r}
-source("explore/0204-more-R-basics.R")
+#source("./0204-more-R-basics.R")
+# I have  errors with relative paths, cannot find file. Using absolute path it works.
+source("C:/R/portfolio-severyn-gabe/explore/0204-more-R-basics.R")
+
+glimpse(df)
+
+ggplot(df, aes(x = x1, y = y1)) +
+    geom_point() +
+    geom_line()
 ```
 
+Aaaand after that brief interruption, we return to StarWars data.
+
+```{r}
+starwars_worlds %>% 
+    arrange(desc(n)) %>% 
+    kable()
+```
+## Try 
+
+Bring it in...
+```{r out.width = "10%"}
+# import an image from resources 
+knitr::include_graphics("../resources/Rlogo.png")
+```

@@ -3,16 +3,16 @@ Test Report
 Gabe Severyn
 2020-03-30
 
-    ## 
-    ## Attaching package: 'dplyr'
+    ## -- Attaching packages --------------------------------------------------------------- tidyverse 1.3.0 --
 
-    ## The following objects are masked from 'package:stats':
-    ## 
-    ##     filter, lag
+    ## v ggplot2 3.3.0     v purrr   0.3.3
+    ## v tibble  2.1.3     v dplyr   0.8.5
+    ## v tidyr   1.0.2     v stringr 1.4.0
+    ## v readr   1.3.1     v forcats 0.5.0
 
-    ## The following objects are masked from 'package:base':
-    ## 
-    ##     intersect, setdiff, setequal, union
+    ## -- Conflicts ------------------------------------------------------------------ tidyverse_conflicts() --
+    ## x dplyr::filter() masks stats::filter()
+    ## x dplyr::lag()    masks stats::lag()
 
 ## Introduction
 
@@ -60,12 +60,26 @@ Graph of worlds and number of characters all it home.
 
 This is the output of a separate R script.
 
-    ## -- Attaching packages --------------------------------------------------------------- tidyverse 1.3.0 --
+    ## Observations: 21
+    ## Variables: 2
+    ## $ x1 <dbl> 0.0, 0.5, 1.0, 1.5, 2.0, 2.5, 3.0, 3.5, 4.0, 4.5, 5.0, 5.5, 6.0,...
+    ## $ y1 <dbl> 0.00000000, 0.47942554, 0.84147098, 0.99749499, 0.90929743, 0.59...
 
-    ## v tibble  2.1.3     v purrr   0.3.3
-    ## v tidyr   1.0.2     v stringr 1.4.0
-    ## v readr   1.3.1     v forcats 0.5.0
+![](0301-markdown-basics_files/figure-gfm/unnamed-chunk-4-1.png)<!-- -->
 
-    ## -- Conflicts ------------------------------------------------------------------ tidyverse_conflicts() --
-    ## x dplyr::filter() masks stats::filter()
-    ## x dplyr::lag()    masks stats::lag()
+Aaaand after that brief interruption, we return to StarWars data.
+
+| homeworld |  n |
+| :-------- | -: |
+| Naboo     | 11 |
+| Tatooine  | 10 |
+| Alderaan  |  3 |
+| Coruscant |  3 |
+| Kamino    |  3 |
+| Corellia  |  2 |
+| Kashyyyk  |  2 |
+| Mirial    |  2 |
+| Ryloth    |  2 |
+| \#\# Try  |    |
+
+Bring it in… <img src="resources/Rlogo.png" width="10%" />
