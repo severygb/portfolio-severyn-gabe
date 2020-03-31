@@ -10,14 +10,20 @@ editor_options:
 ```{r echo = FALSE}
 # ERROR: This chunk creates an output... Even though echo = false
 # the echo = FALSE in this code chunk header is necessary 
-library("knitr")  
-library("graphclassmate")
-library("tidyverse")
-opts_knit$set(root.dir = "../")
+ 
+knitr::opts_knit$set(root.dir = "../")
 
 # this setting applies to all subsequent code chunks, not this one
-opts_chunk$set(echo = FALSE) 
+knitr::opts_chunk$set(echo = FALSE)
 ```
+
+
+```{r message = FALSE}
+library("knitr")
+library("graphclassmate")
+library("tidyverse")
+```
+
 
 ## Introduction
 
@@ -102,5 +108,5 @@ Bring it in...
 
 ```{r out.width = "10%"}
 # import an image from resources 
-include_graphics("../resources/Rlogo.png")
+#include_graphics("../resources/Rlogo.png")
 ```
