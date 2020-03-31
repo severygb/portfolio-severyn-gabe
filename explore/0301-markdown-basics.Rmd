@@ -8,20 +8,21 @@ editor_options:
 ---
 
 ```{r echo = FALSE}
-# ERROR: This chunk creates an output... Even though echo = false
-# the echo = FALSE in this code chunk header is necessary 
+knitr::opts_knit$set(root.dir = "../")
+knitr::opts_chunk$set(echo = FALSE) 
+```
+
+
+```{r message = FALSE}
 library("knitr")  
 library("graphclassmate")
 library("tidyverse")
-opts_knit$set(root.dir = "../")
-
-# this setting applies to all subsequent code chunks, not this one
-opts_chunk$set(echo = FALSE) 
+library("magick")
 ```
 
 ## Introduction
 
-This display illustrat es the distribution of speeds attained by skiers
+This display illustrates the distribution of speeds attained by skiers
 in three downhill events in the 2012 Olympic Winter Games disaggregated
 by sex.
 
@@ -68,12 +69,8 @@ ggplot(starwars_worlds, aes(x = n, y = homeworld)) +
 ```
 
 This is the output of a separate R script.
-```{r}
-#source("./0204-more-R-basics.R")
-# I have  errors with relative paths, cannot find file. Using absolute path it works.
-# source("C:/R/portfolio-severyn-gabe/explore/0204-more-R-basics.R")
 
-# In an R code chunk, using "source()", the working directory is the project top level
+```{r}
 source("explore/0204-more-R-basics.R")
 glimpse(df)
 
@@ -102,5 +99,35 @@ Bring it in...
 
 ```{r out.width = "10%"}
 # import an image from resources 
-include_graphics("../resources/Rlogo.png")
+# include_graphics("resources/Rlogo.png")
 ```
+
+
+OK, this works, using markdown syntax. 
+
+![](../resources/Rlogo.png) 
+
+It does not however allow you to control the image size. To do that, let's install the `magick` package.  
+
+```{r}
+# read the iamge
+my_img <- image_read("resources/Rlogo.png")
+
+# how large is the figure?
+image_info(my_img)
+
+# scale to width (in pixels) 
+my_img  <- image_scale(my_img, "50")
+
+# write scaled versioon to file
+image_write(my_img, 
+        path = "resources/Rlogo-scaled.png", 
+        format = "png")
+```
+
+
+Then import this scaled version
+
+![](../resources/Rlogo-scaled.png) 
+
+

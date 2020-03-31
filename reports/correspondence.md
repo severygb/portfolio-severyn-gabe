@@ -1,4 +1,13 @@
 
+### 2020-03-31
+
+**RL** I could not fix the knitr problem with trelative file paths. So I
+have used a workaround. See the work I added to the
+`0301-markdowen-basics.Rmd` script. Before knitting the script, install
+the `magick` package.
+
+**GS**
+
 ### 2020-03-24
 
 **RL** This is an example of a second comment in reverse chronological
