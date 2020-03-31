@@ -20,6 +20,7 @@ library("tidyverse")
 library("magick")
 ```
 
+
 ## Introduction
 
 This display illustrates the distribution of speeds attained by skiers
@@ -99,7 +100,7 @@ Bring it in...
 
 ```{r out.width = "10%"}
 # import an image from resources 
-# include_graphics("resources/Rlogo.png")
+#include_graphics("../resources/Rlogo.png")
 ```
 
 
