@@ -3,6 +3,7 @@ title: "README"
 output: 
   github_document:
     pandoc_args: "--webtex=https://latex.codecogs.com/png.latex?"
+csl: "../resources/journal-of-glaciology.csl"
 ---
 
 ```{r echo = FALSE, message = FALSE, results = 'hide'}
