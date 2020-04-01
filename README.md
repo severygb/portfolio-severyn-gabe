@@ -1,9 +1,6 @@
 README
 ================
 
-    ##   format width height colorspace matte filesize density
-    ## 1   JPEG  2100   1400       sRGB FALSE  1659763   72x72
-
 ![](resources/rally-scaled.jpg) <small> <br>
 <i>RallyFinland2015-Mokkiperra\_82</i> by Alles Photos is licensed under
 <a href="https://creativecommons.org/licenses/by-nc/2.0/">CC0 BY-NC
@@ -26,3 +23,11 @@ points of the report.
 
 [Reading responses](reports/reading-responses.md) Notes from the data
 graphics literature on elements of design and visual rhetoric.
+
+An equation is displayed nicely through LaTeX   
+![
+x^2 + y^2 = r^2
+](https://latex.codecogs.com/png.latex?%0Ax%5E2%20%2B%20y%5E2%20%3D%20r%5E2%0A
+"
+x^2 + y^2 = r^2
+")
