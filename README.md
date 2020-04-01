@@ -24,6 +24,11 @@ points of the report.
 [Reading responses](reports/reading-responses.md) Notes from the data
 graphics literature on elements of design and visual rhetoric.
 
+## Presentation notes
+
+[Presentation responses](reports/presentation-prompts.md) Notes from the
+data graphics literature on elements of design and visual rhetoric.
+
 An equation is displayed nicely through LaTeX   
 ![
 x^2 + y^2 = r^2
