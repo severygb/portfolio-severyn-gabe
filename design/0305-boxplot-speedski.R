@@ -3,7 +3,7 @@ library("graphclassmate")
 
 speedski <- readRDS("data/0305-boxplot-speedski-data.rds")
 
-p <- ggplot(explore, aes(x = speed, y = event_sex, fill = sex)) +
+p <- ggplot(speedski, aes(x = speed, y = event_sex, fill = sex)) +
   geom_boxplot() +
   theme_graphclass() +
   scale_fill_manual(values = c(rcb("light_BG"), rcb("light_Br"))) +
@@ -13,7 +13,7 @@ p <- ggplot(explore, aes(x = speed, y = event_sex, fill = sex)) +
 
 p
 
-ggsave(filename = "0305-boxplot-nontrad.png",
+ggsave(filename = "0305-boxplot-speedski.png",
        path    = "figures",
        width   = 8,
        height  = 2.5,
