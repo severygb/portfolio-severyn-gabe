@@ -1,6 +1,7 @@
 library(readr)
 library(tidyverse)
 library("utils")
+library(graphclassmate)
 
 #scrape web data
 url <- "https://dasl.datadescription.com/download/data/3249"
@@ -36,6 +37,10 @@ college <- college %>%
   mutate(type_performance = str_c(ACT_Average, Type, sep = " @ ")) %>% 
   mutate(type_performance = fct_reorder(type_performance, Earn))
 
-p <- ggplot(college, aes(x = Earn, y = type_performance)) +
-  geom_point()
+p <- ggplot(college, aes(x = Earn, y = type_performance, color = Type, fill = Type)) +
+  geom_jitter(width = 0, height = 0.2, shape = 21, size = 2, alpha = 0.5) +
+  theme_graphclass() +
+  labs(x = "Post-Graduation Earnings", y = "")
 p
+
+summary(college)

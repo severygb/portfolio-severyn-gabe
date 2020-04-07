@@ -4,32 +4,32 @@ output: github_document
 
 ## D1 distributions 
 
-State the number of observations:  
+State the number of observations: 706
 
 List the variables: 
 
-- quantitative var 1 
-- quantitative var 2 
-- etc 
-- categorical var 1 and its levels 
-- categorical var 1 and its levels 
-- etc 
+- Post Graduation Earnings
+- School Type: Public and Private
+- Student ACT performance: Above and Below average
 
-State the graph type: 
+State the graph type: Strip Plot
 
 Explain why the graph type is suited to the data structure:  
 
-- point 1 
-- point 2 
+- Since there is not a huge number of observations, a strip plot depicts the actual data.
+- There are four clear categories, and the reader will want to compare them
 - etc 
 
 Explain each design choice and cite its supporting reference 
 
+- I grouped the Above and Below average test score categories, because students wanting to know the best path will know which group they fit into based on their own test scores. This choice makes it easier for the audience to answer their own question. Wainer, Howard (2014)
 - choice, reference 
-- choice, reference 
-- etc 
 
 Comments from peers 
+
+Improvements to be made:
+- Add a line for median salary in each category?
+- Format X axis in standard currency form
 
 - Does the data structure satisfy the portfolio display requirements?  
 - From the Doumont paper, what type of story is being told? 
