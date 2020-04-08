@@ -56,7 +56,11 @@ question(s) about the “one thing?”
 words pointing out the most and least effective drugs is highly
 informative. Grouping bacteria by Gram staining shows the slight inverse
 correlation between Penicillin and the other two. Connecting the dots
-into lines also shows how closely Neomycin and Streptomycin perform.
+into lines is not advised here, because the x axis is a categorical
+variable, and a line implies an order or trend between the types of
+bacteria, when there is no order or meaning to the order. No matter
+which convention you use (bigger is better or opposite), clearly label
+or show the meaning.
 
 **Prompt:** Re-read Wainer’s conclusion section. What main points does
 he make about graph design or visual rhetoric that you could apply to
@@ -65,7 +69,9 @@ your own work this term.
 **Response:** The most effictive data display depends on the question to
 be answered. Seeing general trends or comparing individual numbers will
 result in a drastically different graph. In this class, the graph and
-question need to be tightly intertwined.
+question need to be tightly intertwined. Data displays are heavily
+influenced by audience analysis, and anticipating what questions they
+want answered by your chart.
 
 ## Week 2 Reading prompts
 
