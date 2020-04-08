@@ -17,8 +17,7 @@ State the graph type: Strip Plot
 Explain why the graph type is suited to the data structure:  
 
 - Since there is not a huge number of observations, a strip plot depicts the actual data.
-- There are four clear categories, and the reader will want to compare them
-- etc 
+- There are four clear categories, and the reader will want to compare them, which is easily done with the common x-axis.
 
 Explain each design choice and cite its supporting reference 
 
@@ -28,18 +27,14 @@ Explain each design choice and cite its supporting reference
 Comments from peers 
 
 Improvements to be made:
-- Add a line for median salary in each category?
+- Communicate how the rows are ordered
+- Show Above and Below average correspond to ACT scores
+- Cite data source in figure caption
 - Format X axis in standard currency form
 
-- Does the data structure satisfy the portfolio display requirements?  
-- From the Doumont paper, what type of story is being told? 
-- Is the graph type suited to the data structure? 
-- Other suggestion 
-- etc
-
-
-
-
+- The data structure satisfies the portfolio display requirements.
+- ACT score is a continuous quantative variable, this will tell a different story when it is shown as such, not as a block category.
+- Find and communicate any background or limitations on the data. Is there a specific time span, or were some observations included or not? I currently do not know these things about my college earnings data, but they are important to the story.
 
 
 ## D2 multiway 
