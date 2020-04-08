@@ -1,0 +1,31 @@
+---
+title: "D1 Temporary Test"
+output: 
+  github_document: 
+    pandoc_args: "--webtex"
+bibliography: "../resources/references.bib"
+link-citations: yes
+csl: "../resources/journal-of-glaciology.csl"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+#sometimes this is necessary: pandoc_args: "--webtex=https://latex.codecogs.com/png.latex?"
+```
+
+## A title
+
+Visualization is a great place to start with R programming, because the payoff is 
+so clear: you get to make elegant and informative plots that help you understand 
+data [@Wickham+Grolemund:2017]. 
+
+Choosing the correct data to include in a report is incredibly important because "displays of evidence implicitly but powerfully define the scope of the relevant, as presentd data are selected from a larger pool of material" [@Tufte:1997]
+
+## An equation
+
+$$
+m\ddot{x} + c\dot{x} + kx = F
+$$
+
+
+## References
