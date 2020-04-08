@@ -100,7 +100,7 @@ Bring it in...
 
 ```{r out.width = "10%"}
 # import an image from resources 
-#include_graphics("../resources/Rlogo.png")
+# include_graphics("resources/Rlogo.png")
 ```
 
 
