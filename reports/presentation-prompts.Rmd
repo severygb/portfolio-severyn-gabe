@@ -5,8 +5,17 @@ output: github_document
 ## D1 distributions 
 
 State the number of observations: 706
-
+[Data source](https://dasl.datadescription.com/datafile/graduate-earnings/)
+[Information on the data](https://money.com/how-money-ranks-best-colleges-2019/)
 List the variables: 
+
+Improvements to be made:
+- Communicate how the rows are ordered
+- Put D1 graph in it's own Rmd file, include in README
+- essay: include limitations on data, talk about techincal and rhetorical choices
+- Show Above and Below average correspond to ACT scores
+- Cite data source in figure caption
+- Format X axis in standard currency form
 
 - Post Graduation Earnings
 - School Type: Public and Private
@@ -26,15 +35,11 @@ Explain each design choice and cite its supporting reference
 
 Comments from peers 
 
-Improvements to be made:
-- Communicate how the rows are ordered
-- Show Above and Below average correspond to ACT scores
-- Cite data source in figure caption
-- Format X axis in standard currency form
-
 - The data structure satisfies the portfolio display requirements.
 - ACT score is a continuous quantative variable, this will tell a different story when it is shown as such, not as a block category.
 - Find and communicate any background or limitations on the data. Is there a specific time span, or were some observations included or not? I currently do not know these things about my college earnings data, but they are important to the story.
+- Categorizing by large and small schools may be useful, but the data set does not have that data.
+- Initially I thought each dot was a student, but in fact it is a college. Test scores, earnings, and need fractions represent medians for the students who attended the school.
 
 
 ## D2 multiway 
