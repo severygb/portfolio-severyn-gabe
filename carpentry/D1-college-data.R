@@ -1,21 +1,14 @@
-#this script is outdated now. Use D1 in carpentry and design for changes and updates.
-
 library(readr)
 library(tidyverse)
-library("utils")
-library(graphclassmate)
+library(seplyr)
 
 #scrape web data
 url <- "https://dasl.datadescription.com/download/data/3249"
 
 #brings it in as a tibble
 college_raw  <- read_delim(url,
-                   col_names = TRUE,
-                   delim = "\t")
-
-glimpse(college_raw)
-summary(college_raw)
-#head(college_raw)
+                           col_names = TRUE,
+                           delim = "\t")
 
 college <- select(college_raw, c("Public", "Earn", "ACT","need_fraction")) %>% glimpse()
 
@@ -40,12 +33,10 @@ college <- college %>%
 #turn 4 combinations into 4 levels & reorder
 college <- college %>% 
   mutate(category = str_c(ACT_rank, need_rank, sep = " & ")) %>% 
-  mutate(category = fct_reorder(category, Earn)) #default ranking is median
+  mutate(category = fct_reorder(category, Earn)) #default ranking is medianf
 
-p <- ggplot(college, aes(x = Earn, y = category, color = school_type, fill = school_type)) +
-  geom_jitter(width = 0, height = 0.2, shape = 21, size = 2, alpha = 0.5) +
-  theme_graphclass() +
-  labs(x = "Annual Earnings Post-Graduation", y = "")
-p
+saveRDS(college, file = "data/D1-college-data.rds")
 
-summary(college)
+
+# additional data analysis
+group_summarize(college, "category", cat_median = median(Earn))
