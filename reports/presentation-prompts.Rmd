@@ -5,21 +5,11 @@ output: github_document
 ## D1 distributions 
 
 State the number of observations: 706
-[Data source](https://dasl.datadescription.com/datafile/graduate-earnings/)
-[Information on the data](https://money.com/how-money-ranks-best-colleges-2019/)
+
 List the variables: 
-
-Improvements to be made:
-- Communicate how the rows are ordered
-- Put D1 graph in it's own Rmd file, include in README
-- essay: include limitations on data, talk about techincal and rhetorical choices
-- Show Above and Below average correspond to ACT scores
-- Cite data source in figure caption
-- Format X axis in standard currency form
-
-- Post Graduation Earnings
+- Annual Earnings Post Graduation 
 - School Type: Public and Private
-- Student ACT performance: Above and Below average
+- School Student Demographic: High ACT & High Need, High ACT & Low Need, Low ACT & High Need, Low ACT & Low Need
 
 State the graph type: Strip Plot
 

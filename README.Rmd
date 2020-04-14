@@ -52,7 +52,9 @@ State the type of graph (strip plot or box plot) and summarize the main points o
 ## Presentation notes    
 [Presentation responses](reports/presentation-prompts.md) Notes from the data graphics literature on elements of design and visual rhetoric. 
 
-An equation is displayed nicely through LaTeX
+[Reflections on Rhetoric](reports/reflections-on-rhetoric.md) Writing responses and lessons learned from rhetorical presentations.
+
+An example equation is displayed nicely through LaTeX
 $$
 x^2 + y^2 = r^2
 $$
