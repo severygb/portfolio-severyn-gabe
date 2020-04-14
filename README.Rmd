@@ -43,7 +43,7 @@ Gabe Severyn - `r format(Sys.Date(), '%B %Y')`
 
 ## Displays and critiques 
 
-[Display 1](reports/d1-temp.md) Title of your graph     
+[Display 1](reports/D1-report.md) Title of your graph     
 State the type of graph (strip plot or box plot) and summarize the main points of the report.
 
 ## Discussion notes    
