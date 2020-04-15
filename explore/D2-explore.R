@@ -52,6 +52,12 @@ ggplot(df4, aes(x = highway.mpg, y = fuel.system)) +
   facet_wrap(vars(engine.type), as.table = FALSE) +
   theme_graphclass()
 
+ggplot(df4, aes(x = city.mpg, y = fuel.system)) +
+  geom_point() +
+  facet_wrap(vars(engine.type), as.table = FALSE) +
+  theme_graphclass()
+
+
 levels(df4$fuel.system)
 summary(df4$fuel.system)
 
