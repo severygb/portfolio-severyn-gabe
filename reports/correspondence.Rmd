@@ -2,6 +2,29 @@
 output: github_document
 ---
 
+### 2020-04-15 D3 and D2 graphs and D2 essay
+
+**RL comments** 
+
+
+
+
+
+### 2020-04-15 D2 graph and D1 essay
+
+**RL comments** 
+
+- Try a reorganization of the essay with the story first, including a journalistic-style headline that tells the main story. 
+- Then you can have a separate section devoted to discussing the design of the display. You can move the "D1" details that currently start the essay to the design section. 
+- Use sentence case for all text in the display. Capitalize the first word, proper nouns, and acronyms only. 
+- You can add a caption below the figure that starts, Figure 1. then a descriptive caption. The title above the graph can still be used. 
+- In the sign section, use terminology from the Doumont paper to describe the visual story, explain the data structure and how the graph design is appropriate for the structure of the data
+- D2 multiway grahh not ready, but data is selected. ]
+
+
+
+
+
 
 
 ### 2020-04-08 D1 studio
