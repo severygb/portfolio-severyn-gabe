@@ -64,8 +64,32 @@ table <- select(table, -c("blah", "Total")) #get rid of empty and total columns
 
 # start with coordinatized table -----------------------------------
 
-totals_2000 <- table[1,] #extract totals
+#extract totals
+totals_2000 <- table[1,2:ncol(table)] %>%
+  str_replace_all(",", "") %>%
+  as.numeric()
+
 vessels_2000 <- table[2:nrow(table),] #only left with percentage table data
+
+#convert type to factor
+type_levels <- c("Dry Cargo", "Tanker", "Towboat", "Passenger", "Crewboat", "Dry Barge", "Liquid Barge")
 
 vessels_2000 <- pivot_longer(vessels_2000, cols = 2:ncol(vessels_2000), names_to = "type", values_to = "n")
 
+vessels_2000 <- vessels_2000 %>%
+  mutate(type = factor(type, levels = type_levels))
+
+vessels_2000 <- vessels_2000 %>%
+  mutate(n = as.numeric(n)) %>%
+  mutate(n = n/100*totals_2000[unclass(vessels_2000$type)]) %>% #this line is magic
+  mutate(Age = factor(Age, levels = c("<6", "6–10", "11–15", "16–20","21–25",">25"))) %>%
+  glimpse()
+
+
+p <- ggplot(vessels_2000, aes(x = n, y = Age)) +
+  geom_point() +
+  facet_wrap(vars(type), as.table = FALSE) +
+  theme_graphclass() +
+  scale_x_log10() +
+  labs(x = "Number of Boats", subtitle = "U.S. Flag Vessels in 2000")
+p
