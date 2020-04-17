@@ -6,13 +6,14 @@ Demographics do not predict earnings at US colleges
 College earnings are not strongly predicted by the demographics of
 students entering schools.
 
-This dataset is derived from MONEY’s best college rankings. This is an
-annual study done on colleges in the US focusing on identifying schools
-that offer the most value to students and their families, as well as top
-performers in various academic metrics. Each datapoint is one of the 706
-(Minimum of 200 for D1) four-year colleges MONEY studied that year,
-which are colleges in the Unites States meeting a [few
-criteria](https://money.com/how-money-ranks-best-colleges-2019/).
+This dataset is derived from MONEY’s best college rankings (Desk). This
+is an annual study done on colleges in the US focusing on identifying
+schools that offer the most value to students and their families, as
+well as top performers in various academic metrics. Each datapoint is
+one of the 706 (Minimum of 200 for D1) four-year colleges MONEY studied
+that year, which are colleges in the Unites States meeting a [few
+criteria](https://money.com/how-money-ranks-best-colleges-2019/)
+(Mulhere, [2019](#ref-MONEY:2019)).
 
 The distribution of earnings by the financial-academic demographic
 categories brings stereotypes to the forefront: the ‘have-it-alls’
@@ -84,19 +85,27 @@ misleading information.
 
 ## References
 
-[Data
-source](https://dasl.datadescription.com/datafile/graduate-earnings/)
-
-[Information on the
-data](https://money.com/how-money-ranks-best-colleges-2019/)
-
 <div id="refs" class="references">
+
+<div id="ref-DASL">
+
+Desk D Graduate Earnings.
+<https://dasl.datadescription.com/datafile/graduate-earnings/>
+
+</div>
 
 <div id="ref-Doumont:2009">
 
 Doumont J-L (2009) Designing the graph. *Trees, maps, and theorems:
 Effective communication for rational minds*. Principiae, Kraainem,
 Belgium, 133–143 <http://www.treesmapsandtheorems.com/>
+
+</div>
+
+<div id="ref-MONEY:2019">
+
+Mulhere K (2019) How MONEY Ranked the 2019 Best Colleges.
+<https://money.com/how-money-ranks-best-colleges-2019/>
 
 </div>
 
