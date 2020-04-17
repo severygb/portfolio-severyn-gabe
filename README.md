@@ -17,8 +17,8 @@ Gabe Severyn - April 2020
 
 [Display 1](reports/D1-report.md) Student Demographics and Post
 Graduation Earnings at US Colleges  
-This strip plot explores the demographics at US colleges and their post
-graduation earnings.
+This strip plot explores the demographics entering US colleges and their
+earnings.
 
 ## Discussion notes
 

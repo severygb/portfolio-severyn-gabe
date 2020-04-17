@@ -2,6 +2,7 @@ library(tidyverse)
 library(pdftools)
 library(cdata)
 library(tidyr)
+library(graphclassmate)
 
 #start with the relevant page extracted from the whole report, to simplify it greatly
 txt <- pdf_text("data-raw/US-flag-vessels.pdf")
@@ -72,17 +73,18 @@ totals_2000 <- table[1,2:ncol(table)] %>%
 vessels_2000 <- table[2:nrow(table),] #only left with percentage table data
 
 #convert type to factor
-type_levels <- c("Dry Cargo", "Tanker", "Towboat", "Passenger", "Crewboat", "Dry Barge", "Liquid Barge")
+#type_levels <- c("Dry Cargo", "Tanker", "Towboat", "Passenger", "Crewboat", "Dry Barge", "Liquid Barge")
 
 vessels_2000 <- pivot_longer(vessels_2000, cols = 2:ncol(vessels_2000), names_to = "type", values_to = "n")
 
 vessels_2000 <- vessels_2000 %>%
-  mutate(type = factor(type, levels = type_levels))
+  mutate(type = factor(type))
 
 vessels_2000 <- vessels_2000 %>%
   mutate(n = as.numeric(n)) %>%
   mutate(n = n/100*totals_2000[unclass(vessels_2000$type)]) %>% #this line is magic
   mutate(Age = factor(Age, levels = c("<6", "6–10", "11–15", "16–20","21–25",">25"))) %>%
+  mutate(type = fct_reorder(type, n)) %>%
   glimpse()
 
 
@@ -91,5 +93,13 @@ p <- ggplot(vessels_2000, aes(x = n, y = Age)) +
   facet_wrap(vars(type), as.table = FALSE) +
   theme_graphclass() +
   scale_x_log10() +
-  labs(x = "Number of Boats", subtitle = "U.S. Flag Vessels in 2000")
+  labs(x = "Number of boats", y = "Age of vessel", subtitle = "U.S. flag vessels in 2000")
 p
+
+p2 <- ggplot(vessels_2000, aes(x = n, y = type)) +
+  geom_point() +
+  facet_wrap(vars(Age), as.table = FALSE) +
+  theme_graphclass() +
+  scale_x_log10() +
+  labs(x = "Number of boats", y = "Age of vessel", subtitle = "U.S. flag vessels in 2000")
+p2
