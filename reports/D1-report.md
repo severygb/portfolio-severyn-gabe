@@ -19,14 +19,14 @@ The distribution of earnings by the financial-academic demographic
 categories brings stereotypes to the forefront: the ‘have-it-alls’
 (affluent and smart), or the underpriveleged (lower test scores and
 low-income families). Stereotypes at their core are based in truth, and
-some will see that reinforced in this graphic. The demographic ategories
-are ordered by median salary, and as most would expect, colleges with a
-high median ACT score produce graduates that tend to be high earners.
-However, looking deeper this graphic tells a different story. Earnings
-between each demographic category overlap greatly. In fact, there is
-only an $8,200 difference between the highest and lowest median
-earnings. The demographics that attend a college are not a significant
-factor in determining earnings after college.
+some will see that reinforced in this graphic. The demographic
+categories are ordered by median salary, and as most would expect,
+colleges with a high median ACT score produce graduates that tend to be
+high earners. However, looking deeper this graphic tells a different
+story. Earnings between each demographic category overlap greatly. In
+fact, there is only an $8,200 difference between the highest and lowest
+median earnings. The demographics that attend a college are not a
+significant factor in determining earnings after college.
 
 <img src="../figures/D1-college.png" width="80%" />
 
