@@ -1,7 +1,7 @@
 Demographics do not predict earnings at US colleges
 ================
 
-# Story
+## Story
 
 College earnings are not strongly predicted by the demographics of
 students entering schools.
@@ -49,7 +49,7 @@ analysis from this display, and should seek the most recent information.
 However, at the time this data was current, it offered insights into the
 profile of students entering colleges across the US.
 
-# Graph design
+## Graph design
 
 According to Doumount, a strip plot is effective for comparing data with
 one continuous variable and one or more categorical variables (Doumont,

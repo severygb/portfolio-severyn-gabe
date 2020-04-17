@@ -15,7 +15,7 @@ opts_chunk$set(echo = TRUE)
 #sometimes this is necessary: pandoc_args: "--webtex=https://latex.codecogs.com/png.latex?"
 ```
 
-# Story
+## Story
 
 College earnings are not strongly predicted by the demographics of students entering schools.
 
@@ -32,7 +32,7 @@ Earnings is the average salary of graduates five years out. The ACT test score i
 
 One important piece of background information this dataset is missing is the year the study refers to. From browsing MONEY's recent college ranking lists, I determined this dataset is from no later than 2014. Missing this context surrounding the data limits the conclusions we can draw - i.e. prospective college students should not place stock in analysis from this display, and should seek the most recent information. However, at the time this data was current, it offered insights into the profile of students entering colleges across the US.
 
-# Graph design
+## Graph design
 
 According to Doumount, a strip plot is effective for comparing data with one continuous variable and one or more categorical variables [@Doumont:2009]. The collegiate earnings dataset fits this criteria, and we are interested in comparing the earnings of each demographic making a strip plot appropriate. The resulting graphic shows the distribution of the single quantitative variable (earnings) over the two categorical variables (ACT score and need amount), with two levels each (above and below average). None of the variables are time based, as those are best represented with different types of graphs.
 
