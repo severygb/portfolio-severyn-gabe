@@ -15,10 +15,12 @@ Gabe Severyn - April 2020
 
 ## Displays and critiques
 
-[Display 1](reports/D1-report.md) Student Demographics and Post
-Graduation Earnings at US Colleges  
+[Display 1](reports/D1-report.md) Student demographics and post
+graduation earnings at US colleges  
 This strip plot explores the demographics entering US colleges and their
 earnings.
+
+[Display 2](reports/D2-report.md) US commercial vessels are antiquated
 
 ## Discussion notes
 
@@ -32,11 +34,3 @@ data graphics literature on elements of design and visual rhetoric.
 
 [Reflections on Rhetoric](reports/reflections-on-rhetoric.md) Writing
 responses and lessons learned from rhetorical presentations.
-
-An example equation is displayed nicely through LaTeX   
-![
-x^2 + y^2 = r^2
-](https://latex.codecogs.com/png.latex?%0Ax%5E2%20%2B%20y%5E2%20%3D%20r%5E2%0A
-"
-x^2 + y^2 = r^2
-")
