@@ -2,7 +2,7 @@ library(graphclassmate)
 library(tidyverse)
 library(scales)
 
-readRDS(file = "data/D2-vessels-2000.rds")
+vessels_2000 <- readRDS(file = "data/D2-vessels-2000.rds")
 
 p <- ggplot(vessels_2000, aes(x = n, y = Age)) +
   geom_point() +

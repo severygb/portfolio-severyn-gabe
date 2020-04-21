@@ -2,6 +2,7 @@ library(tidyverse)
 library(pdftools)
 library(cdata)
 library(tidyr)
+library(seplyr)
 
 #start with the relevant page extracted from the whole report, to simplify it greatly
 txt <- pdf_text("data-raw/US-flag-vessels.pdf")
@@ -72,8 +73,11 @@ vessels_2000 <- table[2:nrow(table),] #only left with percentage table data
 
 vessels_2000 <- pivot_longer(vessels_2000, cols = 2:ncol(vessels_2000), names_to = "type", values_to = "n")
 
+#convert type to factor
+type_levels <- c("Dry Cargo", "Tanker", "Towboat", "Passenger", "Crewboat", "Dry Barge", "Liquid Barge")
+
 vessels_2000 <- vessels_2000 %>%
-  mutate(type = factor(type))
+  mutate(type = factor(type, levels = type_levels))
 
 vessels_2000 <- vessels_2000 %>%
   mutate(n = as.numeric(n)) %>%
@@ -83,3 +87,6 @@ vessels_2000 <- vessels_2000 %>%
   glimpse()
 
 saveRDS(vessels_2000, file = "data/D2-vessels-2000.rds")
+
+#check totals line up with the data table
+(group_summarize(vessels_2000, "type", n = sum(n)))
