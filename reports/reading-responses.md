@@ -1,4 +1,42 @@
 
+## Week 6 reading prompts
+
+Dragga, Sam & Dan Voss (2001) Cruel pies: The inhumanity of technical
+illustrations. *Technical Communication* 48(3): 265–274.
+
+**Prompt:** Explain how the prevalent treatment of ethics in visual
+communication is lacking.
+
+**Response:** All previous research and literature on ethical graphics
+focuses on correctly representing numerical data, and preventing
+misleading conclusions. Even if the graphic is true, and not misleading
+in any way, it can still turn the subject into nothing more than
+statistics.
+
+**Prompt:** Explain the purpose of “humanizing” data displays depicting
+human suffering or death.
+
+**Response:** As humans, we have the capacity for compassion and
+empathy, and those feelings have the unique ability to drive us to
+action. When we see a graphic about fatalities or injuries, we are meant
+to take away a drive to action, to improve the situation or help those
+affected.
+
+**Prompt:** Consider the authors’ attempts at redesigning such data
+displays. Did one in particular strike you as ineffective? Explain
+
+**Response:** The author’s redesign of Minard’s depiction of Napoleons’s
+casualties did not seem poingnant. Placing figures of soldiers and
+gravestones to depict the army size and casualties makes the graphic
+look more like a game of Risk, and not like thousands of men perishing.
+
+**Prompt:** Did one in particular strike you as effective? Explain.
+
+**Response:** The most effective humanizing redesign is Figure 11:
+injuries related to baby walkers. The child in the walker has a clear
+progression from top of stairs to ambulance, without appearing humorous
+or light hearted, but also not being graphic or gruesome.
+
 ## Week 4 Reading Prompts
 
 Wainer, Howard (2014) Fifteen displays about one thing. In: *Medical
