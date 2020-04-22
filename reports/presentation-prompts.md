@@ -3,11 +3,9 @@
 
 State the number of observations: 706
 
-List the variables:
-
-  - Post Graduation Earnings
-  - School Type: Public and Private
-  - Student ACT performance: Above and Below average
+List the variables: - Annual Earnings Post Graduation - School Type:
+Public and Private - School Student Demographic: High ACT & High Need,
+High ACT & Low Need, Low ACT & High Need, Low ACT & Low Need
 
 State the graph type: Strip Plot
 
@@ -16,8 +14,7 @@ Explain why the graph type is suited to the data structure:
   - Since there is not a huge number of observations, a strip plot
     depicts the actual data.
   - There are four clear categories, and the reader will want to compare
-    them
-  - etc
+    them, which is easily done with the common x-axis.
 
 Explain each design choice and cite its supporting reference
 
@@ -29,15 +26,18 @@ Explain each design choice and cite its supporting reference
 
 Comments from peers
 
-Improvements to be made: - Add a line for median salary in each
-category? - Format X axis in standard currency form
-
-  - Does the data structure satisfy the portfolio display
-    requirements?  
-  - From the Doumont paper, what type of story is being told?
-  - Is the graph type suited to the data structure?
-  - Other suggestion
-  - etc
+  - The data structure satisfies the portfolio display requirements.
+  - ACT score is a continuous quantative variable, this will tell a
+    different story when it is shown as such, not as a block category.
+  - Find and communicate any background or limitations on the data. Is
+    there a specific time span, or were some observations included or
+    not? I currently do not know these things about my college earnings
+    data, but they are important to the story.
+  - Categorizing by large and small schools may be useful, but the data
+    set does not have that data.
+  - Initially I thought each dot was a student, but in fact it is a
+    college. Test scores, earnings, and need fractions represent medians
+    for the students who attended the school.
 
 ## D2 multiway
 
@@ -77,30 +77,27 @@ Comments from peers
 
 ## D3 correlations
 
-State the number of observations:
+State the number of observations: 196
 
 List the variables:
 
-  - quantitative var 1
-  - quantitative var 2
-  - etc
-  - categorical var 1 and its levels
-  - categorical var 1 and its levels
-  - etc
+  - engine bore size
+  - engine stroke size
+  - vehicle body style: convertible, hardtop, batchback, sedan, wagon
+  - vehicle drive wheels: front and rear, 4wd eliminated because it was
+    not well represented
 
-State the graph type:
+State the graph type: Scatterplot
 
 Explain why the graph type is suited to the data structure:
 
-  - point 1
-  - point 2
-  - etc
+  - 2 quantitative varibles
+  - looks for correlation between them, very little in this case
 
 Explain each design choice and cite its supporting reference
 
-  - choice, reference
-  - choice, reference
-  - etc
+  - highlight difference between bore size, easier to see differences in
+    the y axis
 
 Comments from peers
 
