@@ -10,9 +10,9 @@ imports <- imports %>%
       "Rear wheel drive"      = "rwd"
   ))
 
-ggplot(imports, aes(x = stroke, y = bore, color = body.style)) +
+ggplot(imports, aes(x = stroke, y = bore, color = drive.wheels)) +
   geom_point() +
-  facet_wrap(vars(drive.wheels)) +
+  facet_wrap(vars(body.style), ncol = 1) +
   labs(y = "Engine bore (inch)", x = "Engine stroke (inch)", 
        title = "Engines in front wheel drive vehicles have a smaller bore") +
   theme_graphclass()
