@@ -1,7 +1,14 @@
 US commercial vessels are antiquated
 ================
 
-## Story
+There are more tankers \<6 years old than expected by the trend, because
+The Oil Pollution Act (OPA) of 1990, prompted by the Exxon Valdez
+environmental disaster, began to require double-hull vessels as an added
+protection against oil spills. This required replacing existing existing
+ships with new ones. However, there is still a lot of updating to do,
+because 84% of the US tanker fleet is over 16 years old.
+
+<img src="../figures/D2-vessels-1.png" width="90%" />
 
 Freight Facts and Figures is a report published by the Bureau of
 Transportation chock full of data on the transportation of goods in and
@@ -9,8 +16,8 @@ around the US. It is intended to provide “a snapshot” of the industry to
 help “decision makers, planners, and the public understand the magnitude
 and importance of freight transportation to the economy” (Chao and
 others, [2017](#ref-FFF:2017)). This lofty goal is not achieved well.
-Below is their snapshot of the water-going vessels the US economy relies
-on.
+Below is their ‘snapshot’ of the water-going vessels the US economy
+relies on.
 
 <img src="../resources/FFF-table-3-9.png" width="80%" />
 
@@ -21,22 +28,6 @@ public’s understanding. Prose surrounding the table offers no meaningful
 conclusions, only mentioning the size of the fleet decreased between
 2000 and 2014 (Chao and others, [2017](#ref-FFF:2017)). Re-flowing this
 data into a graphical form is far more informative.
-
-<img src="../figures/D2-vessels-1.png" width="90%" />
-
-There are more tankers \<6 years old than expected by the trend, because
-The Oil Pollution Act (OPA) of 1990, prompted by the Exxon Valdez
-environmental disaster, began to require double-hull vessels as an added
-protection against oil spills. This required replacing existing existing
-ships with new ones. However, there is still a lot of updating to do,
-because 84% of the US tanker fleet is over 16 years old.
-
-Below is the multiway’s dual, which does not provide as useful a
-summary. Ordering the panels by age highlights the distribution of
-vessel types, showing for example that dry barges are the most numerous
-vessels and tankers are the least common - a story not of great value.
-
-<img src="../figures/D2-vessels-2.png" width="80%" />
 
 “U.S. flag vessels include a wide range of vessel types that are used to
 move freight around the globe. However, shallow draft vessels (barges
@@ -73,6 +64,13 @@ numbers with no overprinting, and are formatted with commas for
 immediate readability. The age category is ordered in increasing order,
 as it would be if it was a numerical variable. Ordering the age
 categories in any other way would cause confusion.
+
+Both variations of the multiway were examined, switching the facet and y
+axis categories. The multiway presented above better aligns the visual
+logic with the arguments I make in prose. Using vessel type on the y
+axis and faceting by age highlighted the numerical distribution of
+vessel types. For example, it showed that dry barges are the most
+numerous vessels and tankers are the least common.
 
 ## References
 
