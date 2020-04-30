@@ -1,49 +1,48 @@
 US commercial vessels are antiquated
 ================
 
-There are more tankers \<6 years old than expected by the trend, because
-The Oil Pollution Act (OPA) of 1990, prompted by the Exxon Valdez
-environmental disaster, began to require double-hull vessels as an added
-protection against oil spills. This required replacing existing existing
-ships with new ones. However, there is still a lot of updating to do,
-because 84% of the US tanker fleet is over 16 years old.
+Commercial vessels based in the United States are pushing the limits of
+ship design life. In nearly all types, there are more vessels over 25
+years old than in any other age range. Typical design life for
+commercial maritime vessels is 20-30 years (Dinu and Ilie,
+[2015](#ref-Dinu+Ilie:2015)). This means a large portion of the US fleet
+is operating at near or past the designed service life.
 
 <img src="../figures/D2-vessels-1.png" width="90%" />
+
+However, operating ships beyond designed limits is not uncommon in the
+maritime shipping industry. In 2013, the global average age of a ship
+was over 20 years (Dinu and Ilie, [2015](#ref-Dinu+Ilie:2015)). Given
+the massive costs to design, construct, and operate large vessels,
+owners want to maximize their life and return on investment.
+
+There are a few exceptions to the trend of operating old vessels. There
+are more tankers \<6 years old than expected because The Oil Pollution
+Act (OPA) of 1990, prompted by the Exxon Valdez environmental disaster,
+began to require double-hull vessels as an added protection against oil
+spills. This required replacing ships with new ones. However, there is
+still a lot of updating to do, because 84% of the US tanker fleet is
+over 16 years old. *?\!?\!? investigate any visual anomalies: crewboat
+\>25 should be larger*
 
 Freight Facts and Figures is a report published by the Bureau of
 Transportation chock full of data on the transportation of goods in and
 around the US. It is intended to provide “a snapshot” of the industry to
 help “decision makers, planners, and the public understand the magnitude
 and importance of freight transportation to the economy” (Chao and
-others, [2017](#ref-FFF:2017)). This lofty goal is not achieved well.
-Below is their ‘snapshot’ of the water-going vessels the US economy
-relies on.
+others, [2017](#ref-FFF:2017)). This lofty goal is not achieved well,
+because the writers just did not have much to say. Below is their
+‘snapshot’ of the water-going vessels the US economy relies on.
 
 <img src="../resources/FFF-table-3-9.png" width="80%" />
 
-If I was a decision-maker, I would decide to look elsewhere for more
-digestible evidence. A cluttered table may be acceptable for compactly
-publishing data, but not for presenting findings or furthering the
-public’s understanding. Prose surrounding the table offers no meaningful
+If I was a decision-maker, I would decide to look elsewhere to find more
+informative evidence.Prose surrounding the table offers no meaningful
 conclusions, only mentioning the size of the fleet decreased between
-2000 and 2014 (Chao and others, [2017](#ref-FFF:2017)). Re-flowing this
-data into a graphical form is far more informative.
-
-“U.S. flag vessels include a wide range of vessel types that are used to
-move freight around the globe. However, shallow draft vessels (barges
-and towboats) make up 93.8 percent of the fleet and operate domestically
-on intracoastal waterways and river systems. Our inland waterways
-provide an alternative to truck and rail transportation, a barge can
-carry an amount equal to or greater than 15 railcars or 60 large
-semi-truck trailers. Overall, the U.S. fleet decreased by more than
-1,272 vessels (3.1 percent) between 2000 and 2014, largely due to the
-retirement of dry bulk barges. An increase in the percentage of tankers
-and liquid bulk barges 10 or less years old was largely driven by The
-Oil Pollution Act (OPA) of 1990, which required double hulls by January
-1, 2015. Double hulls provide greater protection to the marine
-environment from spills caused by collisions or groundings.” (42)
-
-investigate any visual anomalies: LB-11-15, Towboat 6-10, or more
+2000 and 2014 (Chao and others, [2017](#ref-FFF:2017)). A cluttered
+table may be acceptable for compactly publishing data, but not for
+presenting findings or furthering the public’s understanding. Re-flowing
+this data into a graphical form is far more informative.
 
 ## Graph design
 
@@ -81,6 +80,15 @@ numerous vessels and tankers are the least common.
 Chao E, Rosen J, Hu P and Schmitt R (2017) *Freight Facts and Figures.*,
 12th edn. U.S. Department of Transportation, Bureau of Transporation
 Statistics [www.bts.gov](www.bts.gov)
+
+</div>
+
+<div id="ref-Dinu+Ilie:2015">
+
+Dinu O and Ilie AM (2015) Maritime vessel obsolescence, life cycle cost
+and design service life. *IPO Conference Series: Material Science and
+Engineering* **95**
+<https://iopscience.iop.org/article/10.1088/1757-899X/95/1/012067/pdf>
 
 </div>
 
