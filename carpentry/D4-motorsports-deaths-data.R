@@ -46,6 +46,8 @@ deaths %<>%
 min(deaths$year)
 max(deaths$year)
 
+saveRDS(deaths, file = "data/D4-motorsports-deaths-individual.rds")
+
 #data is tidy and workable now ------------------------------------
 
 #summarize counts per year. gives a single number per year.
@@ -61,8 +63,4 @@ year_deaths %<>%
   mutate(year = make_date(year = year)) %>%
   glimpse()
 
-ggplot(year_deaths, aes(x = year, y = n)) +
-  geom_line() +
-  scale_x_date(date_breaks = "10 years", date_labels = "%Y") +
-  
-  
+saveRDS(year_deaths, file = "data/D4-motorsports-deaths-yearly.rds")
