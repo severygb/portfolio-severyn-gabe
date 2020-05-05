@@ -53,14 +53,33 @@ Respond to these last two prompts after our class discussion.
 **Prompt:** Describe the idea from our discussion that is most important
 to you or had the greatest impact on your thinking.
 
-**Response:**
+**Response:** I recognized that imagery was central to social rhetoric,
+because meaning is assigned to images or icons by different cultures. I
+thought that numbers would cut through the potential for
+misunderstanding or conflicting meanings because they are a rigidly
+learned construct- there is only one meaning for the number “20”. But
+this is not entirely true, because it is not the numbers that matter, it
+is the context. To people with different economic status $20 carries a
+different meaning, due to their circumstance and pre-existing notions
+about money. My learning is solely in the scientific camp, so I attemped
+to pick which rhetoric to apply based on the data I am trying to convey
+as if there is a best answer- the notion of which is completely
+contrary.
 
 **Prompt:** Explain the idea from our discussion or the paper that you
 will apply to one of your data displays. Be specific: What display? What
 changes will you make? On what basis in the reading do you make the
 change?
 
-**Response:**
+**Response:** I will apply adaptive rhetoric to my D4 display, catering
+to people in the motorsport community seeing the display on my web
+portfolio. To this community, objects like a racing helmet, or car
+numbers, or a podium carry a meaning of celebrating an individual who
+won, or cheering on a favorite driver in a race. A green flag will
+incite excitement, while a yellow flag will start worry. When the medium
+of the display changes, if it was to be printed in black and white for
+example, much of the meaning would be lost. Therefore my display must be
+catered to the specific medium and audience.
 
 ## Week 6 reading prompts
 
