@@ -48,6 +48,8 @@ Gabe Severyn - `r format(Sys.Date(), '%B %Y')`
 
 [Display 2](reports/D2-report.md) US commercial vessels are antiquated  
 
+[Display 3](reports/D3-report.md) INSERT TITLE
+
 ## Discussion notes    
 [Reading responses](reports/reading-responses.md) Notes from the data graphics literature on elements of design and visual rhetoric. 
 

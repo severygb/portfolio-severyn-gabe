@@ -1,0 +1,33 @@
+---
+title: "carz"
+output: 
+  github_document: 
+    pandoc_args: "--webtex"
+bibliography: "../resources/references.bib"
+link-citations: yes
+csl: "../resources/journal-of-glaciology.csl"
+---
+
+```{r setup, include=FALSE}
+library(knitr)
+opts_chunk$set(echo = TRUE)
+```
+
+
+
+```{r echo = FALSE, out.width = "90%"}   
+include_graphics("../figures/D3-imports-engines.png")    
+```
+
+
+## Graph design
+ 
+Data requirements
+
+- Minimum 100 observations
+- Two quantitative variables
+- One categorical variable with at least 5 levels
+- Time is excluded as a variable
+
+
+## References

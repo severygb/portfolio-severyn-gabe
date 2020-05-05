@@ -11,7 +11,7 @@ README
 This portfolio showcases my skill in clear data visualization and
 ethical visual rhetoric.
 
-Gabe Severyn - April 2020
+Gabe Severyn - May 2020
 
 ## Displays and critiques
 
@@ -21,6 +21,8 @@ This strip plot explores the demographics entering US colleges and their
 earnings.
 
 [Display 2](reports/D2-report.md) US commercial vessels are antiquated
+
+[Display 3](reports/D3-report.md) INSERT TITLE
 
 ## Discussion notes
 
