@@ -58,6 +58,7 @@ df <- mutate(df, bs.ratio = bore/stroke)
 ggplot(df, aes(x = bs.ratio, y = highway.mpg, color = body.style)) +
   geom_point()
 #no real correlation there...
+
 ggplot(df, aes(x = bs.ratio, y = peak.rpm, color = fuel.type)) +
   geom_point()
 #colored by aspiration: no real relation w/ ratio & power

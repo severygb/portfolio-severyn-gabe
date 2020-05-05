@@ -27,20 +27,50 @@ summary(df)
 #        units   = "in",
 #        dpi     = 200)
 
+# facet by body style -----------------------------------------------------
 
 #drop 4wd type b/c few data points
 summary(df$drive.wheels)
 df2 <- filter(df, drive.wheels != "4wd")
 #drop convert & hardtop b/c few data points
-df2 <- filter(df2, !(body.style == "convertible" | body.style == "hardtop"))
+#df2 <- filter(df2, !(body.style == "convertible" | body.style == "hardtop"))
 
-ggplot(df2, aes(x = price, y = curb.weight, color = drive.wheels)) +
+ggplot(df2, aes(x = price, y = highway.mpg)) +
   geom_point() +
   theme_graphclass() +  
   facet_wrap(vars(body.style), as.table = FALSE)
+#so far the best, but only three cats with enough to matter
 
 
+#facet by only top makes --------------------------------------------------
 
+#include all makes to show correlation
+ggplot(df, aes(x = price, y = highway.mpg)) +
+  geom_point() +
+  theme_graphclass()
+
+
+top_makes <- df %>%
+  count(make) %>%
+  arrange(desc(n)) %>%
+  head() %>%
+  glimpse()
+
+df3 <- df %>%
+  filter(make %in% top_makes$make) %>%
+  droplevels() %>%
+  glimpse
+#105 observations, 100 is requirement minumum
+summary(df3$make)
+
+ggplot(df3, aes(x = price, y = highway.mpg)) +
+  geom_point() +
+  theme_graphclass() +  
+  facet_wrap(vars(make), as.table = FALSE)
+
+#!!!!!  ISSUE !!!!!!
+#filtering to only 6 makes leaves out a lot of the story... faceting by all makes is horrible though
+#requirements need a cat w/ 5+ levels, I dont have one that represents 5 levels nearly equally
 
 
 
