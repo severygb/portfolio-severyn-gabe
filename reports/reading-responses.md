@@ -1,4 +1,67 @@
 
+## Week 8 reading prompts
+
+Kostelnick, Charles (2007) The visual rhetoric of data displays: The
+conundrum of clarity. *IEEE Transactions on Professional Communication*
+50(2): 280–294.
+
+**Prompt:** In your own words, summarize what the author means by the
+*rhetoric of science.*
+
+**Response:** Rhetoric is designed for a single consistent audience who
+interprets visual information and draws conclusions in a predicable way.
+Desginers make rhetorical choices based on proven ways to maximize
+clarity, which are objective truths about human perception.
+
+**Prompt:** In your own words, summarize what the author means by the
+*rhetoric of adaptation*
+
+**Response:** In recognition that viewers will see the display in a
+variety of mediums and situations, they can break conventions or include
+superfulous ink to cater to a wider variety of viewers. The target
+audience still acts in a predicable way: children need things to keep
+their attention, uneducated people need clearer explanation, formal
+science needs neither. The information stays the same, but the rhetoric
+surrounding the presentation needs to be changed for the intended
+audience and message.
+
+**Prompt:** In your own words, summarize what the author means by
+*social rhetoric.*
+
+**Response:** Since interpreting graphs is a learned skill, and learning
+heavily on upbringing, culture, and past situations, the message a graph
+conveys will be different to those in different cultures. There are
+different standards for data display among various professions, because
+each share a common knowledge and background. Images and visualizations
+are more prone to different interpretations because opposing meanings
+can be assigned to a symbol.
+
+**Prompt:** In your own words, summarize what the author means by the
+*rhetoric of participation.*
+
+**Response:** In an interactive display, the designer no longer makes
+absolute choices about rhetoric; the user can shape their own
+experience. This discourages displays with a single story, but allows
+easier digestion of complex and multifaceted stories. It encourages
+users to explore for themselves, and so they find a story meaningful to
+them.
+
+## reflection
+
+Respond to these last two prompts after our class discussion.
+
+**Prompt:** Describe the idea from our discussion that is most important
+to you or had the greatest impact on your thinking.
+
+**Response:**
+
+**Prompt:** Explain the idea from our discussion or the paper that you
+will apply to one of your data displays. Be specific: What display? What
+changes will you make? On what basis in the reading do you make the
+change?
+
+**Response:**
+
 ## Week 6 reading prompts
 
 Dragga, Sam & Dan Voss (2001) Cruel pies: The inhumanity of technical
