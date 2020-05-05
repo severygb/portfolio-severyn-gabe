@@ -1,6 +1,7 @@
 library(tidyverse)
 library(graphclassmate)
 library(GGally)
+library(magrittr) #for the compound assignment pipe
 
 df <- read.csv(file = "data-raw/imports-85.csv", header = T)
 
@@ -27,68 +28,54 @@ summary(df)
 #        units   = "in",
 #        dpi     = 200)
 
-# facet by body style -----------------------------------------------------
 
-#drop 4wd type b/c few data points
-summary(df$drive.wheels)
-df2 <- filter(df, drive.wheels != "4wd")
-#drop convert & hardtop b/c few data points
-#df2 <- filter(df2, !(body.style == "convertible" | body.style == "hardtop"))
+#-- add country variable
+summary(df$make)
 
-ggplot(df2, aes(x = price, y = highway.mpg)) +
-  geom_point() +
-  theme_graphclass() +  
-  facet_wrap(vars(body.style), as.table = FALSE)
-#so far the best, but only three cats with enough to matter
+df <- df %>% 
+  mutate(country = fct_recode(make,
+                              "Britain" = "jaguar",
+                              "France" = "peugot",
+                              "France" = "renault",
+                              "Germany" = "audi",
+                              "Germany" = "bmw",
+                              "Germany" = "mercedes-benz",
+                              "Germany" = "porsche",
+                              "Germany" = "volkswagen",
+                              "Italy" = "alfa-romero",
+                              "Japan" = "honda",
+                              "Japan" = "mazda",
+                              "Japan" = "mitsubishi",
+                              "Japan" = "nissan",
+                              "Japan" = "subaru",
+                              "Japan" = "toyota",
+                              "Korea" = "isuzu",
+                              "Sweden" = "saab",
+                              "Sweden" = "volvo",
+                              "United States" = "chevrolet",
+                              "United States" = "dodge",
+                              "United States" = "mercury",
+                              "United States" = "plymouth"
+  )) %>%
+  mutate(body.style = fct_recode(body.style,
+                              "coupe" = "hardtop"
+  ))
 
+summary(df$country)
+glimpse(df)
 
-#facet by only top makes --------------------------------------------------
+#only keep data I care about. price, mpg, country, body.style
+df_trimmed <- select(df, price, highway.mpg, country, body.style)
 
-#include all makes to show correlation
-ggplot(df, aes(x = price, y = highway.mpg)) +
-  geom_point() +
-  theme_graphclass()
+#reorder factors in a useful way
+df_trimmed %<>%
+  mutate(country = fct_reorder(country, highway.mpg, .desc = T)) %>%
+  mutate(body.style = fct_reorder(body.style, highway.mpg))
 
+saveRDS(df_trimmed, file = "data/D3-imports.rds")
 
-top_makes <- df %>%
-  count(make) %>%
-  arrange(desc(n)) %>%
-  head() %>%
-  glimpse()
-
-df3 <- df %>%
-  filter(make %in% top_makes$make) %>%
-  droplevels() %>%
-  glimpse
-#105 observations, 100 is requirement minumum
-summary(df3$make)
-
-ggplot(df3, aes(x = price, y = highway.mpg)) +
-  geom_point() +
-  theme_graphclass() +  
-  facet_wrap(vars(make), as.table = FALSE)
-
-#!!!!!  ISSUE !!!!!!
-#filtering to only 6 makes leaves out a lot of the story... faceting by all makes is horrible though
-#requirements need a cat w/ 5+ levels, I dont have one that represents 5 levels nearly equally
-
-
-
-
-# #pare down to just the data I want
-# df <- df %>%
-#   select(drive.wheels, bore, stroke, body.style) %>%
-#   na.omit() %>%
-#   glimpse()
-# 
-# #drop 4wd type b/c few data points
-# summary(df$drive.wheels)
-# df <- filter(df, drive.wheels != "4wd") %>% 
-#   glimpse()
-# 
-# forcats::fct_drop(df$drive.wheels)
-# 
-# levels(df$drive.wheels)
-# #fct_drop DOES NOT WORK, STILL HAS 3 LEVELS!
-# 
-# saveRDS(df, file = "data/D3-imports.rds")
+df  %>% filter(country == "Germany") %>%
+  filter(body.style == "convertible" | body.style == "coupe") %>%
+  arrange(desc(price)) %>%
+  select(price, make, body.style, highway.mpg) %>%
+  head()

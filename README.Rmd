@@ -46,9 +46,11 @@ Gabe Severyn - `r format(Sys.Date(), '%B %Y')`
 [Display 1](reports/D1-report.md) Student demographics and post graduation earnings at US colleges  
   This strip plot explores the demographics entering US colleges and their earnings.
 
-[Display 2](reports/D2-report.md) US commercial vessels are antiquated  
+[Display 2](reports/D2-report.md) US commercial vessels are antiquated
+  A multiway reveals a much stronger story than a data table
 
-[Display 3](reports/D3-report.md) INSERT TITLE
+[Display 3](reports/D3-report.md) Price and fuel economy are mutually exclusive
+  This scatterplot shows the inverse relationship of these two variables
 
 ## Discussion notes    
 [Reading responses](reports/reading-responses.md) Notes from the data graphics literature on elements of design and visual rhetoric. 

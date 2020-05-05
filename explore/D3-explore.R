@@ -18,6 +18,8 @@ df <- df %>%
   mutate(price = as.numeric(as.character(price))) %>%
   glimpse()
 
+#data is tidy at this point ----------------------------
+
 summary(df)
 # --------------------------------------------------------
 levels(df$body.style)
@@ -67,3 +69,69 @@ ggplot(df, aes(x = bs.ratio, y = peak.rpm, color = fuel.type)) +
 ggplot(df, aes(x = bs.ratio, y = highway.mpg, color = aspiration)) +
   geom_point()
 #turbo engines tend to be lower mpg, but not strongly so.
+
+
+#-- facet by country
+
+summary(df$make)
+
+df <- df %>% 
+  mutate(country = fct_recode(make,
+                              "Britain" = "jaguar",
+                              "France" = "peugot",
+                              "France" = "renault",
+                              "Germany" = "audi",
+                              "Germany" = "bmw",
+                              "Germany" = "mercedes-benz",
+                              "Germany" = "porsche",
+                              "Germany" = "volkswagen",
+                              "Italy" = "alfa-romero",
+                              "Japan" = "honda",
+                              "Japan" = "mazda",
+                              "Japan" = "mitsubishi",
+                              "Japan" = "nissan",
+                              "Japan" = "subaru",
+                              "Japan" = "toyota",
+                              "Korea" = "isuzu",
+                              "Sweden" = "saab",
+                              "Sweden" = "volvo",
+                              "United States" = "chevrolet",
+                              "United States" = "dodge",
+                              "United States" = "mercury",
+                              "United States" = "plymouth"
+  )) 
+
+summary(df$country)
+
+glimpse(df)
+
+ggplot(df, aes(x = price, y = highway.mpg, color = country)) +
+  geom_point() +
+  theme_graphclass() +  
+  facet_wrap(vars(body.style), as.table = FALSE)
+
+#facet by only top makes --------------------------------------------------
+
+#include all makes to show correlation
+ggplot(df, aes(x = price, y = highway.mpg)) +
+  geom_point() +
+  theme_graphclass()
+
+
+top_makes <- df %>%
+  count(make) %>%
+  arrange(desc(n)) %>%
+  head() %>%
+  glimpse()
+
+df3 <- df %>%
+  filter(make %in% top_makes$make) %>%
+  droplevels() %>%
+  glimpse
+#105 observations, 100 is requirement minumum
+summary(df3$make)
+
+ggplot(df3, aes(x = price, y = highway.mpg)) +
+  geom_point() +
+  theme_graphclass() +  
+  facet_wrap(vars(make), as.table = FALSE)
