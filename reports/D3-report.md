@@ -22,10 +22,11 @@ overall costs: made up of both initial price and operating costs in
 fuel. Hatchbacks are the lowest cost style of car, and also have some of
 the highest economy numbers.
 
-Fuel economy is much lower in convertibles and coupes because those
-buyers have different priorities. Around and above the $30,000 mark
-exist only Porsches, a luxury-performance brand, and Mercedes-Benz, the
-utmost in luxury cars.
+Buyers of more expensive cars have different priorities than those of
+hatchbacks and sedans. Around and above the $30,000 mark exist only
+Porsche, a luxury-performance brand, and Mercedes-Benz, the utmost in
+luxury cars. These buyers prefer cars to be comfortable, powerful, or
+have high performance.
 
 There are a few things wrong with this data. It does not represent
 domestic manufacturers well, because any american models are merely
@@ -51,6 +52,12 @@ Data requirements
   - One categorical variable with at least 5 levels
   - Time is excluded as a variable
 
+A scatterplot is appropriate for this data because the main interest is
+showing the correlation between two continuous quantitative varibles
+(Doumont, [2009](#ref-Doumont:2009)). Body style and country of origin
+are ancillary variables, included for context and to further the story,
+but they play second fiddle to the scatterplot correlation.
+
 Both factors are ordered by economy, which easily shows which style and
 brand are the most efficient. Who said “order by the data”?
 
@@ -62,7 +69,10 @@ One of Wainer’s sarcastic visualization rules is “emphasize the trivial,
 ignore the important” (Wainer, [2000](#ref-Wainer:2000)). He means to
 place important comparisons such that they are easy to make. To
 facilitate comparing mileage across each body style, it is placed on the
-y-axis, which is common for all facets.
+y-axis, which is common for all facets. Additionally, body style is a
+more important factor in correlating price and economy so it is
+separated as panels, while country of origin is relegated to colors
+because it is secondary.
 
 Pulled from a repositoty for machine learning, this data set strongly
 resembles the mtcars data included in R. This was not intentional, I
@@ -72,6 +82,14 @@ found the similarity through tutorials that used mtcars.
 ## References
 
 <div id="refs" class="references">
+
+<div id="ref-Doumont:2009">
+
+Doumont J-L (2009) Designing the graph. *Trees, maps, and theorems:
+Effective communication for rational minds*. Principiae, Kraainem,
+Belgium, 133–143 <http://www.treesmapsandtheorems.com/>
+
+</div>
 
 <div id="ref-Dua:2019">
 

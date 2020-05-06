@@ -64,3 +64,4 @@ year_deaths %<>%
   glimpse()
 
 saveRDS(year_deaths, file = "data/D4-motorsports-deaths-yearly.rds")
+

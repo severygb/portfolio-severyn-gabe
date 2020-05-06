@@ -106,53 +106,41 @@ Comments from peers
 
 **Context** 
 
-Type of injury or fatality: 
+Type of injury or fatality: deaths in motorsports
 
-People affected: 
+People affected: racing fans, teams
 
-Over what span of time: 
-
-
+Over what span of time: the last 100 years
 
 **Graph the data conventionally**
 
-- If you are redesigning someone else's graph, include an image of the original 
-- If not, graph the data yourself using a graph type suited to the data  
+State the number of observations: 3446 death records over 116 years.
 
-State the number of observations:  
+List the variables:
 
-List the variables: 
+- quantitative var: count of fatalities in that year
+- categorical var: time in years
 
-- quantitative var 1 
-- quantitative var 2 
-- etc 
-- categorical var 1 and its levels 
-- categorical var 1 and its levels 
-- etc 
-
-State the graph type: 
+State the graph type: line graph
 
 Explain why the graph type is suited to the data structure: 
 
-- point 1 
-- point 2 
-- etc 
+- it shows the change in numbers of deaths over time
 
 Explain the visual-rhetoric features of the graph that make it unethical:  
 
-- point 
-- point 
-- etc
+- no context, just a line.
+- Representing people as a yearly sum does not recognize the individual costs
+- it looks strikingly close to a financial graph...
 
 **Redesign the graph to display the data ethically**
 
-State the new graph type (if any): 
+State the new graph type (if any): still a line chart
 
 Explain each design choice in the redesign and cite its supporting reference 
 
-- choice, reference 
-- choice, reference 
-- etc 
+- represent each fatality as a small person. Humanizes it, from waitbutwhy
+- somber color scheme
 
 Comments from peers 
 
