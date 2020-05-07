@@ -67,10 +67,13 @@ glimpse(df)
 #only keep data I care about. price, mpg, country, body.style
 df_trimmed <- select(df, price, highway.mpg, country, body.style)
 
+
+
 #reorder factors in a useful way
 df_trimmed %<>%
   mutate(country = fct_reorder(country, highway.mpg, .desc = T)) %>%
-  mutate(body.style = fct_reorder(body.style, highway.mpg))
+  mutate(body.style = fct_reorder(body.style, highway.mpg)) %>%
+  filter(complete.cases(.))
 
 saveRDS(df_trimmed, file = "data/D3-imports.rds")
 
@@ -79,3 +82,30 @@ df  %>% filter(country == "Germany") %>%
   arrange(desc(price)) %>%
   select(price, make, body.style, highway.mpg) %>%
   head()
+
+
+# visualize missing data ---------------------------------------
+library(VIM)
+
+df_trim2 <- select(df, price, highway.mpg, country, body.style) %>%
+  rename("mpg" = "highway.mpg")
+
+png(file = "figures/D3-missing-values.png", width = 8, height = 4, units = "in", res = 300)
+aggr(df_trim2, 
+     # color: observed, missing, imputed
+     col = c(rcb("pale_BG"), rcb("mid_BG")), 
+     numbers  = TRUE, 
+     bars     = TRUE, 
+     sortVars = TRUE, 
+     prop     = TRUE, 
+     combine  = TRUE
+)
+dev.off()
+
+x <- df_trim2 %>% 
+  select(body.style, price)
+
+png(file = "figures/D3-missing-values-distribution.png", width = 8, height = 4, units = "in", res = 300)
+spineMiss(x, 
+          col = c(rcb("pale_BG"), rcb("mid_BG")))
+dev.off()

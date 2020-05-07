@@ -78,6 +78,10 @@ axis and faceting by age highlighted the numerical distribution of
 vessel types. For example, it showed that dry barges are the most
 numerous vessels and tankers are the least common.
 
+The source for data was complete, as there are no missing values in the
+published table. Therefore, nothing needed to be done to visualize or
+correct for missing values.
+
 ## References
 
 <div id="refs" class="references">

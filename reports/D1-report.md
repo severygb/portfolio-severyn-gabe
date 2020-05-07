@@ -83,6 +83,18 @@ scores. Including the average values is also an ethical requirement;
 disclosing how categories were created means the author cannot hide
 misleading information.
 
+This data set had very few missing values, visualized by the VIM
+package. The spine plot below looks at the four variables that make up
+the data displayed in the strip plot. Suprisingly, only the need
+fraction ‘NF’ contained missing values, shown by the combination with a
+darkened panel for NF.
+
+<img src="../figures/D1-missing-values.png" width="60%" />
+
+With only 19 missing out of 706 observations (2.7%), incomplete
+observations were simply omitted with very little change to the
+graphical story.
+
 ## References
 
 <div id="refs" class="references">

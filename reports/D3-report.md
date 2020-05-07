@@ -33,7 +33,7 @@ domestic manufacturers well, because any american models are merely
 captive-imports: models built by overseas manufactures but sold under
 domestic names. For inexplicable reasons it does not include trucks
 either. This limited view is still meaningful however, because the US
-was the largest automobile market at the time.
+was the largest automobile market at at the time.
 
 Finding this data for domestic cars may provide additional context to
 this story. Perhaps foreign companies produce more economical cars
@@ -73,6 +73,17 @@ y-axis, which is common for all facets. Additionally, body style is a
 more important factor in correlating price and economy so it is
 separated as panels, while country of origin is relegated to colors
 because it is secondary.
+
+I continue to have good luck and pick datasets with very little missing
+data. Of the variables used in this display, only price contains missing
+values (4 in 205 observations, 2%). The spine chart below shows that the
+missing values are split between the most common body styles (hatchback
+and sedan). From this, we conclude the missing values are not biased to
+a certain body style and do not significantly change the visual story.
+
+<img src="../figures/D3-missing-values.png" width="70%" />
+
+The few problematic observations are omitted from the graph.
 
 Pulled from a repositoty for machine learning, this data set strongly
 resembles the mtcars data included in R. This was not intentional, I
