@@ -52,6 +52,9 @@ Gabe Severyn - `r format(Sys.Date(), '%B %Y')`
 [Display 3](reports/D3-report.md) Price and fuel economy are mutually exclusive
   This scatterplot shows the inverse relationship of these two variables
 
+[Display 4](reports/D4-report.md) Motorsports safety improvements are accelerating
+  An ethical display of fatalities in racing, and the equipment that prevents them.
+
 ## Discussion notes    
 [Reading responses](reports/reading-responses.md) Notes from the data graphics literature on elements of design and visual rhetoric. 
 

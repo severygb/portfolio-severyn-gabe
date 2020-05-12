@@ -1,0 +1,53 @@
+---
+title: "Motorsports safety has improved"
+output: 
+  github_document: 
+    pandoc_args: "--webtex"
+bibliography: "../resources/references.bib"
+link-citations: yes
+csl: "../resources/journal-of-glaciology.csl"
+---
+
+```{r setup, include=FALSE}
+library(knitr)
+opts_chunk$set(echo = TRUE)
+```
+
+There are three primary threats to a driver: high g-load, object intrusion, and fire. [https://www.automobilemag.com/news/motorsports-safety-past-present-future-intrusion-fire-g-loads/]
+
+
+```{r echo = FALSE, out.width = "100%"}   
+include_graphics("../figures/D3-scatterplot-imports.png")    
+```
+
+Racing safety advances:
+  HANS devices widely mandated. 2000-2003, [https://web.archive.org/web/20080104173743/http://www.catchfence.com/html/2006/mt032706.html]
+  nomex fire suits 1964 [https://web.archive.org/web/20121011234900/http://www.nascar.com/news/121009/ups-game-changer-uniforms/index.html]
+  SAFER barriers a.k.a. 'soft' walls, 2002 [https://time.com/4546783/auto-racing-barrier-deaths/]
+  driver restraint systems
+  Carbon fiber monocoque in 1981 by McLaren [https://www.motorsport.com/f1/news/tech-analysis-the-key-safety-advances-that-saved-alonso-s-life-682435/682435/]
+  roll-over hoops mandated at Indy 500 [https://www.goodwood.com/grr/columnists/doug-nye/2017/6/doug-nye-how-safety-has-advanced-in-motorsport/]
+  seat belts / harnesses, 1957-1963. [^ above]
+  
+Not labeled but derseves a mention: helmet improvements, intrusion mitigators (F1 Aeroscreen and Halo)
+
+There is a story here that this graph does not address - the data I obtained makes no distinction between professional and amateur drivers. A national or international series, such as NASCAR or F1, has the resources and knowledge to drive advancements in safety technology, and the ability to mandate equipment within the series. Professional and manufacture-backed teams have enough budget to afford the safest equipment available. Amateur racing is the exact opposite.
+
+Drivers and teams at local race tracks can not afford top-tier equipment. Local tracks can not afford to fit energy-absorbing wall material (at a cost upwards of $500 a foot [https://www.automobilemag.com/news/motorsports-safety-past-present-future-intrusion-fire-g-loads/]). 
+
+There has been a trickle-down effect for safety improvements, especially in helmets, restraint harnesses, fuel cells, and the knowledge to build a strong driver protection cabin. Even the budget-centric racing series 24 Hours of LeMons, where cars must cost below $500, enforces *strict* safety protocols for crash safety and fire prevention.
+
+Only in the 1990's did people and series begin to look at crashes and injuries in a scientific manner, searching for safety improvements and studying how to mitigate risks [https://web.archive.org/web/20080104173743/http://www.catchfence.com/html/2006/mt032706.html].
+
+## Graph design
+ 
+Data requirements
+
+- Minimum 100 observations
+- Two quantitative variables
+- One categorical variable with at least 5 levels
+- Time is excluded as a variable
+
+Why is this graph type appropriate? design decisions, especially citing humanizing the content
+
+## References
