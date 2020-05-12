@@ -20,9 +20,16 @@ graduation earnings at US colleges
 This strip plot explores the demographics entering US colleges and their
 earnings.
 
-[Display 2](reports/D2-report.md) US commercial vessels are antiquated
+[Display 2](reports/D2-report.md) US commercial vessels are antiquated A
+multiway reveals a much stronger story than a data table
 
-[Display 3](reports/D3-report.md) INSERT TITLE
+[Display 3](reports/D3-report.md) Price and fuel economy are mutually
+exclusive This scatterplot shows the inverse relationship of these two
+variables
+
+[Display 4](reports/D4-report.md) Motorsports safety improvements are
+accelerating An ethical display of fatalities in racing, and the
+equipment that prevents them.
 
 ## Discussion notes
 
