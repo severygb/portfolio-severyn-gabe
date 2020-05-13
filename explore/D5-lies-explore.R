@@ -65,3 +65,19 @@ ggplot() +
     aesthetics = "fill"
   ) +
   labs(title = "Motorization rate in 2015 (per 1000 people)", caption = "Source: OICA")
+
+# do a dot plot for simplicity
+
+continents_data <- read_excel(path = "data-raw/OICA-Continent-Vehicles.xlsx", skip = 1, 
+                 col_names = c("region", "motor_rate2015"),trim_ws = T) %>%
+  glimpse()
+
+continents_data %<>%
+  mutate(region = as_factor(region)) %>%
+  mutate(region = fct_reorder(region, motor_rate2015)) %>%
+  glimpse()
+
+saveRDS(continents_data, file = "data/OICA-motorization-regions.rds")
+
+ggplot(continents_data, aes(x = motor_rate2015, y = region)) +
+  geom_point()
