@@ -2,20 +2,22 @@ Motorsports safety improvements are accelerating
 ================
 
 There are three primary threats to a driver: high g-load, object
-intrusion, and fire. (Smith, [2019](#ref-Smith:2019))
+intrusion, and fire (Smith, [2019](#ref-Smith:2019)). Though the first
+car race is rumored to have occured soon after the creation of the
+second car, the global motorsports community only began to look at
+crashes and injuries in a scientific manner in the 1990’s, furthering
+technology for safety improvements and studying how to mitigate risks
+for drivers, crew members, and spectators (Tyler,
+[2006](#ref-Tyler:2006)).
 
-<img src="../figures/D3-scatterplot-imports.png" width="100%" />
+This data only includes car and truck racing (not motorcycles or boats)
+in the US. Motor racing is a global sport, so there are many individuals
+and race series that are not accounted for here. The vast majority of
+individuals killed in the sport are drivers, but incidents can happen
+anywhere on and off track and over the last hundred years spectators,
+crew members, and safety
 
-Racing safety advances: HANS devices widely mandated. 2000-2003, (Tyler,
-[2006](#ref-Tyler:2006)) nomex fire suits 1964 (Houston,
-[2012](#ref-Houston:2012)) SAFER barriers a.k.a. ‘soft’ walls, 2002
-(Valentine, [2016](#ref-Valentine:2016)) driver restraint systems Carbon
-fiber monocoque in 1981 by McLaren (Piola, [2016](#ref-Piola:2016))
-roll-over hoops mandated at Indy 500 (Nye, [2017](#ref-Nye:2017)) seat
-belts / harnesses, 1957-1963. (Nye, [2017](#ref-Nye:2017))
-
-Not labeled but derseves a mention: helmet improvements, intrusion
-mitigators (F1 Aeroscreen and Halo)
+<img src="../resources/D4-motorsports-fatalities.png" width="100%" />
 
 There is a story here that this graph does not address - the data I
 obtained makes no distinction between professional and amateur drivers.
@@ -36,21 +38,37 @@ a strong driver protection cabin. Even the budget-centric racing series
 24 Hours of LeMons, where cars must cost below $500, enforces *strict*
 safety protocols for crash safety and fire prevention.
 
-Only in the 1990’s did people and series begin to look at crashes and
-injuries in a scientific manner, searching for safety improvements and
-studying how to mitigate risks (Tyler, [2006](#ref-Tyler:2006)).
-
 ## Graph design
 
 Data requirements
 
-  - Minimum 100 observations
-  - Two quantitative variables
-  - One categorical variable with at least 5 levels
-  - Time is excluded as a variable
+  - Minimum 20 observations
+  - One quantitative variable conveying information about human injury
+    or fatality
+  - One or two categorical variables, one of which can be time (time
+    series)
+
+Normalizing the fatalities would be more appropriate in this case
+because it would account for the changing number of participants.
+However, after searching, I could not find data for the number of
+participants across all racing types and series to match the fatalities
+context.
 
 Why is this graph type appropriate? design decisions, especially citing
 humanizing the content
+
+## Notes
+
+Racing safety advances: HANS devices widely mandated. 2000-2003, (Tyler,
+[2006](#ref-Tyler:2006)) nomex fire suits 1964 (Houston,
+[2012](#ref-Houston:2012)) SAFER barriers a.k.a. ‘soft’ walls, 2002
+(Valentine, [2016](#ref-Valentine:2016)) Carbon fiber monocoque in 1981
+by McLaren (Piola, [2016](#ref-Piola:2016)) roll-over hoops mandated at
+Indy 500, 1959 (Nye, [2017](#ref-Nye:2017)) seat belts / harnesses,
+1957-1963. (Nye, [2017](#ref-Nye:2017))
+
+Not labeled but derseves a mention: helmet improvements, intrusion
+mitigators (F1 Aeroscreen and Halo)
 
 ## References
 
