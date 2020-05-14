@@ -10,7 +10,9 @@ world <- map_data("world")
 #makes gray background map
 map <- ggplot(world, aes(x = long, y = lat, group = group)) +
   geom_polygon(fill = "gray") +
-  coord_map(projection = "mollweide") +
+  coord_map(projection = "mollweide", 
+            ylim = c(-75, 75), 
+            orientation = c(90, 0, 0)) +
   theme(axis.line=element_blank(),
         axis.text.x=element_blank(),
         axis.text.y=element_blank(),

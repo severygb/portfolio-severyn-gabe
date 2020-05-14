@@ -1,7 +1,9 @@
 
-### 2020-04-15 D3 and D2 graphs and D2 essay
+### 2020-05-14
 
 **RL comments**
+
+  - Edited the D5 map design ti eliminate the horizontal lines
 
 ### 2020-04-15 D2 graph and D1 essay
 
