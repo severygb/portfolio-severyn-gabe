@@ -1,15 +1,16 @@
 library(tidyverse)
 library(magrittr)
+library(mapproj)
 library(graphclassmate)
 
 map_data <- readRDS("data/D5-motorization-map-data.rds")
 #motorization rate is for 2015. rate is number of vehicles per 1000 people
 world <- map_data("world")
 
-ggplot() +
-  coord_fixed(1.2) +
-  geom_polygon(data = world, aes(x = long, y= lat, group = group), fill = "grey", color = "grey") +
-  geom_polygon(data = map_data, aes(x = long, y = lat, group = group, fill = motor_rate2015)) +
+#makes gray background map
+map <- ggplot(world, aes(x = long, y = lat, group = group)) +
+  geom_polygon() +
+  coord_map(projection = "mollweide") +
   theme(axis.line=element_blank(),
         axis.text.x=element_blank(),
         axis.text.y=element_blank(),
@@ -21,16 +22,23 @@ ggplot() +
         panel.grid.major=element_blank(),
         panel.grid.minor=element_blank(),
         plot.background=element_blank()
-  ) +
-  scale_colour_distiller(
-    type = "seq",
-    palette = "Oranges",
-    direction = 1,
-    space = "Lab",
-    guide = "colourbar",
-    aesthetics = "fill"
-  ) +
+  )
+map
+
+#adds layer for color gradient
+map %<>% +
+  geom_polygon(data = map_data, aes(x = long, y = lat, group = group, fill = motor_rate2015)) +
+  
   labs(title = "Motorization rate in 2015 (per 1000 people)", caption = "Source: OICA")
+
+# scale_colour_distiller(
+#   type = "seq",
+#   palette = "Oranges",
+#   direction = 1,
+#   space = "Lab",
+#   guide = "colourbar",
+#   aesthetics = "fill"
+# ) +
 
 #dot plot
 dot_plot_data <- readRDS("data/D5-motorization-dot-plot-data.rds")
