@@ -9,7 +9,7 @@ world <- map_data("world")
 
 #makes gray background map
 map <- ggplot(world, aes(x = long, y = lat, group = group)) +
-  geom_polygon() +
+  geom_polygon(fill = "gray") +
   coord_map(projection = "mollweide") +
   theme(axis.line=element_blank(),
         axis.text.x=element_blank(),
@@ -28,17 +28,15 @@ map
 #adds layer for color gradient
 map %<>% +
   geom_polygon(data = map_data, aes(x = long, y = lat, group = group, fill = motor_rate2015)) +
-  
-  labs(title = "Motorization rate in 2015 (per 1000 people)", caption = "Source: OICA")
-
-# scale_colour_distiller(
-#   type = "seq",
-#   palette = "Oranges",
-#   direction = 1,
-#   space = "Lab",
-#   guide = "colourbar",
-#   aesthetics = "fill"
-# ) +
+  labs(title = "Motorization rate in 2015 (per 1000 people)", caption = "Source: OICA") +
+  scale_colour_distiller(
+  type = "seq",
+  palette = "Oranges",
+  direction = 1,
+  space = "Lab",
+  guide = "colourbar",
+  aesthetics = "fill"
+)
 
 #dot plot
 dot_plot_data <- readRDS("data/D5-motorization-dot-plot-data.rds")
