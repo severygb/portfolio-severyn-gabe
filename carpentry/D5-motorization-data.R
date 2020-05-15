@@ -36,6 +36,8 @@ unique(df$region)
 #match map data with motorization data
 world_motor_rate <- inner_join(df, world, by = "region")
 
+arrange(df, desc(motor_rate2015))
+
 saveRDS(world_motor_rate, file = "data/D5-motorization-map-data.rds")
 
 #carpent the dot plot data

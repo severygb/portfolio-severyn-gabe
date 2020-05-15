@@ -31,6 +31,10 @@ variables
 accelerating An ethical display of fatalities in racing, and the
 equipment that prevents them.
 
+[Display 5](reports/D5-report.md) Global motorization rate
+
+[Display 6](reports/D6-report.md) Not yet
+
 ## Discussion notes
 
 [Reading responses](reports/reading-responses.md) Notes from the data

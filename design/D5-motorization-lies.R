@@ -1,3 +1,5 @@
+#Gabe Severyn
+#May 2020
 library(tidyverse)
 library(magrittr)
 library(mapproj)
@@ -7,11 +9,21 @@ map_data <- readRDS("data/D5-motorization-map-data.rds")
 #motorization rate is for 2015. rate is number of vehicles per 1000 people
 world <- map_data("world")
 
+#for testing
+# ggplot(world, aes(x = long, y = lat, group = group)) +
+#   geom_polygon(fill = "gray") +
+#   coord_map(projection = "mollweide",
+#             xlim = c(-150, 170),
+#             ylim = c(-50, 75),
+#             orientation = c(90, 0, 0))
+
+
 #makes gray background map
 map <- ggplot(world, aes(x = long, y = lat, group = group)) +
   geom_polygon(fill = "gray") +
   coord_map(projection = "mollweide", 
-            ylim = c(-50, 75), 
+            xlim = c(-150, 170),
+            ylim = c(-50, 75),
             orientation = c(90, 0, 0)) +
   theme(axis.line=element_blank(),
         axis.text.x=element_blank(),
@@ -29,7 +41,7 @@ map <- ggplot(world, aes(x = long, y = lat, group = group)) +
 #adds layer for color gradient
 map <- map +
   geom_polygon(data = map_data, aes(x = long, y = lat, group = group, fill = motor_rate2015)) +
-  labs(title = "Motorization rate in 2015", caption = "Source: OICA", fill = "Vehicles\nper 1000 people") +
+  labs(title = "        Motorization rate in 2015", caption = "Source: OICA        ", fill = "Vehicles\nper 1000 people") +
   scale_colour_distiller(
     type = "seq",
     palette = "Oranges",
@@ -38,11 +50,13 @@ map <- map +
     guide = "colourbar",
     aesthetics = "fill"
     ) +
-  theme(legend.position = c(0.2,0.25),
+  theme(legend.position = c(0.15,0.25),
         plot.title = element_text(size = 11),
         plot.caption = element_text(size = 11),
         legend.title = element_text(size = 10),
-        legend.background = element_rect(fill = NA))
+        legend.background = element_rect(fill = NA),
+        plot.margin = unit(c(0.1, 0, 0.1, 0), "in")
+        )
 
 map
 
@@ -57,7 +71,7 @@ ggsave(plot = map, filename = "D5-map.png",
 #dot plot
 dot_plot_data <- readRDS("data/D5-motorization-dot-plot-data.rds")
 
-dot_plot <- ggplot(continents_data, aes(x = motor_rate2015, y = region)) +
+dot_plot <- ggplot(dot_plot_data, aes(x = motor_rate2015, y = region)) +
   geom_point(size = 2) +
   theme_graphclass() +
   theme(
