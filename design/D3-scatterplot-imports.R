@@ -23,12 +23,12 @@ imports <- readRDS(file = "data/D3-imports.rds")
 
 # wide panel layout, 1 row
 
-ggplot(imports, aes(x = price, y = highway.mpg, color = country)) +
-  geom_point(size = 0.9) +
+ggplot(imports, aes(x = price/1000, y = highway.mpg)) +
+  geom_point(size = 2.2, alpha = 0.4) +
   theme_graphclass() +  
   facet_wrap(vars(body.style), as.table = F, nrow = 1) +
-  scale_x_continuous(labels = dollar, breaks = seq(0,50000,15000)) +
-  labs(x = "Price (1985 dollars)", y = "Highway fuel economy (mi/gal)",
+  scale_x_continuous(labels = dollar) +
+  labs(x = "Price (thousands of 1985 dollars)", y = "Highway fuel economy (mi/gal)",
        caption = "Source: UCI Machine Learning Repository",
        title = "New vehicles imported into the US in 1985") +
   theme(legend.position="bottom", plot.margin=unit(c(0.1,0.25,0.1,0.1),"in"))

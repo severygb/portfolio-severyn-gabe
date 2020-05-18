@@ -5,43 +5,47 @@ There is a strongly inverse correlation between vehicle price and
 highway fuel economy. Of the cars imported into the US in 1985, there
 were not expensive cars that achieved good fuel economy nor were there
 inexpensive cars with poor fuel economy (Dua and Graff,
-[2017](#ref-Dua:2019)).
+[2017](#ref-Dua:2017)).
 
 <img src="../figures/D3-scatterplot-imports.png" width="100%" />
 
 An explanation of the trend can be traced back to companies producing
 products that satisfy consumer preferences. Simply put, brands make cars
-people want to buy- theoretically. The following explanations make sense
-from the view of the producer targeting consumers. No conclusions can be
-made about which vehicles actually appealed to consumers and sold, since
-this data does not include sales or profit information.
+people want to buy. The explanation make sense from the view of the
+producer targeting potential consumers. No conclusions can be made about
+which vehicles actually appealed to consumers and sold, since this data
+does not include sales or profit information.
 
 Sedan and hatchbacks and wagons strongly exhibit an inverse correlation
 between price and economy. A budget conscious shopper prioritizes low
 overall costs: made up of both initial price and operating costs in
 fuel. Hatchbacks are the lowest cost style of car, and also have some of
-the highest economy numbers.
+the highest fuel economy numbers.
 
 Buyers of more expensive cars have different priorities than those of
-hatchbacks and sedans. Around and above the $30,000 mark exist only
-Porsche, a luxury-performance brand, and Mercedes-Benz, the utmost in
-luxury cars. These buyers prefer cars to be comfortable, powerful, or
-have high performance.
+hatchbacks and sedans. All of the vehicles around and above the $30,000
+are Porsche, a luxury-performance brand, or Mercedes-Benz, the
+gold-standard of luxury cars. Buyers willing to spend that much prefer
+cars to be comfortable, have a certain status, or have high performance.
+Overall, there was no real correlation between fuel economy and country
+of origin, which was explored.
 
-There are a few things wrong with this data. It does not represent
+There are a few contextual issues with this data. It does not represent
 domestic manufacturers well, because any american models are merely
 captive-imports: models built by overseas manufactures but sold under
-domestic names. For inexplicable reasons it does not include trucks
-either. This limited view is still meaningful however, because the US
-was the largest automobile market at at the time.
+domestic brands. For inexplicable reasons it does not include trucks
+either. The US was the largest automobile market at at the time, so the
+trends seen in this data likely represent the global trends.
 
-Finding this data for domestic cars may provide additional context to
-this story. Perhaps foreign companies produce more economical cars
-because the domestic producers are leaving that market segment empty. I
-am sure this story would be drastically different with data from current
-years, both because automotive market segments are more diverse than
-ever and because of recent focus on economy and electrification. As
-always, there are more questions than answers.
+Extending this data to include domestic cars may provide additional
+context to this story. Perhaps foreign companies produce more economical
+cars because the domestic producers are leaving that market segment
+empty. This story would be dramatically different with data from current
+years (post 2010). Both because automotive market segments are more
+diverse than ever, and because of recent focus on fuel efficiency and
+electrification. How would current market trends compare to those of
+1985? Do current luxury cars still get poor fuel economy? As always,
+there are more questions than answers.
 
 ## Graph design
 
@@ -55,15 +59,19 @@ Data requirements
 A scatterplot is appropriate for this data because the main interest is
 showing the correlation between two continuous quantitative varibles
 (Doumont, [2009](#ref-Doumont:2009)). Body style and country of origin
-are ancillary variables, included for context and to further the story,
+are ancillary variables, included for context and to further the story
 but they play second fiddle to the scatterplot correlation.
 
 Both factors are ordered by economy, which easily shows which style and
 brand are the most efficient. Who said “order by the data”?
 
-Price is formatted in standard currency form, which enables immediate
-understanding. Care was taken to eliminate label overprinting- the exact
-opposite of clarity.
+This graphic uses the standard theme as discussed in the [D2
+report](https://github.com/severygb/portfolio-severyn-gabe/blob/master/reports/D2-report.md).
+Price is formatted in currency form, which enables immediate
+understanding. Care was taken to eliminate label overprinting by
+changing the axis scale to thousands, eliminating all of the trailing
+zeros. Much of the data in hatchback and sedan is closely clustered, so
+a slight transparency is added to the points.
 
 One of Wainer’s sarcastic visualization rules is “emphasize the trivial,
 ignore the important” (Wainer, [2000](#ref-Wainer:2000)). He means to
@@ -74,14 +82,16 @@ more important factor in correlating price and economy so it is
 separated as panels, while country of origin is relegated to colors
 because it is secondary.
 
-I continue to have good luck and pick datasets with very little missing
-data. Of the variables used in this display, only price contains missing
-values (4 in 205 observations, 2%). The spine chart below shows that the
-missing values are split between the most common body styles (hatchback
-and sedan). From this, we conclude the missing values are not biased to
-a certain body style and do not significantly change the visual story.
+I continue to have good luck and pick
+[datasets](https://archive.ics.uci.edu/ml/datasets/Automobile) with very
+little missing data. Of the variables used in this display, only price
+contains missing values (4 in 205 observations, 2%). The spine chart
+below shows that the missing values are split between the most common
+body styles (hatchback and sedan). From this, we conclude the missing
+values are not biased to a certain body style and do not significantly
+change the visual story.
 
-<img src="../figures/D3-missing-values.png" width="70%" />
+<img src="../figures/D3-missing-values.png" width="60%" />
 
 The few problematic observations are omitted from the graph.
 
@@ -102,7 +112,7 @@ Belgium, 133–143 <http://www.treesmapsandtheorems.com/>
 
 </div>
 
-<div id="ref-Dua:2019">
+<div id="ref-Dua:2017">
 
 Dua D and Graff C (2017) UCI machine learning repository automobile data
 set. <https://archive.ics.uci.edu/ml/datasets/Automobile>
