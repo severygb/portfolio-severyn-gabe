@@ -44,7 +44,7 @@ superfluous data in the pursuit of conveying the information clearly and
 concisely. Although all charts (including the original) contain the same
 data, they do not all convey the same information. The chloropleth map
 and dot plot are displayed together because “showing data more than one
-way increases our understanding” (Robbins, [2005](#ref-Robbins:2005)).
+way increases our understanding” (Robbins, [2013](#ref-Robbins:2013b)).
 
 ## Stage 1: clearly compare regions
 
@@ -52,7 +52,7 @@ The original chart emphaizes continent headings, however, the OICA
 dataset contains country level rates which make it possible to get a
 much more granular view of the data. Motorization rate is expressed as a
 color gradient where color intensity increases with vehicle
-concentration.
+concentration (Rost, [2018](#ref-Rost:2018)).
 
 <img src="../figures/D5-map.png" width="100%" />
 
@@ -100,7 +100,7 @@ North America, Europe, Japan and South Korea all have strong vehicle
 manufacturing industries. Understandably, the countries where many
 vehicles are made consume vehicles above the global average rate. This
 plot has been banked to 45 degrees so the viewer can more easily see the
-slight break (Robbins, [2005](#ref-Robbins:2005)).
+slight break (Robbins, [2013](#ref-Robbins:2013b)).
 
 Even this chart (made to correct lies) includes another lie: showing
 averages when the distribution is skewed (Cairo,
@@ -115,15 +115,13 @@ Put together, the global map and dot plot show a more detailed story,
 depicting the wide spread between nations as well as the fine
 distinctions between continents.
 
-## Data requirements
+**Data requirements**
 
 D5 - correcting a graphical lie
 
   - Minimum 20 observations
-  - One quantitative variable conveying information about human injury
-    or fatality
-  - One or two categorical variables, one of which can be time (time
-    series)
+  - One quantitative variable
+  - Categories are optional, depending on the data
 
 ## References
 
@@ -152,9 +150,18 @@ Engineering CA of (2003) Motorization from a Global Perspective.
 
 </div>
 
-<div id="ref-Robbins:2005">
+<div id="ref-Robbins:2013b">
 
-Robbins N (2005) Scales. *Creating More Effective Graphs*. 226–291
+Robbins N (2013) Scales. *Creating More Effective Graphs*. Chart House,
+Wayne, NJ, 226–291
+<http://www.nbr-graphs.com/resources/recommended-books/>
+
+</div>
+
+<div id="ref-Rost:2018">
+
+Rost LC (2018) What to consider when choosing colors for data
+visualization. <https://blog.datawrapper.de/colors/>
 
 </div>
 
