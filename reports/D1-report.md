@@ -8,11 +8,10 @@ students entering schools.
 
 This dataset is derived from MONEY’s best college rankings (Desk). This
 is an annual study done on colleges in the US focusing on identifying
-schools that offer the most value to students and their families, as
-well as top performers in various academic metrics. Each datapoint is
-one of the 706 (Minimum of 200 for D1) four-year colleges MONEY studied
-that year, which are colleges in the Unites States meeting a [few
-criteria](https://money.com/how-money-ranks-best-colleges-2019/)
+schools that offer the most value, as well as top performers in various
+academic metrics. Each datapoint is one of the 706 four-year colleges
+MONEY studied that year, which are colleges in the Unites States meeting
+a [few criteria](https://money.com/how-money-ranks-best-colleges-2019/)
 (Mulhere, [2019](#ref-MONEY:2019)).
 
 The distribution of earnings by the financial-academic demographic
@@ -25,8 +24,8 @@ colleges with a high median ACT score produce graduates that tend to be
 high earners. However, looking deeper this graphic tells a different
 story. Earnings between each demographic category overlap greatly. In
 fact, there is only an $8,200 difference between the highest and lowest
-median earnings. The demographics that attend a college are not a
-significant factor in determining earnings after college.
+median earnings. Therefore- the demographics that attend a college are
+not a significant factor in determining earnings after college.
 
 <img src="../figures/D1-college.png" width="80%" />
 
@@ -52,15 +51,16 @@ profile of students entering colleges across the US.
 
 ## Graph design
 
-According to Doumount, a strip plot is effective for comparing data with
-one continuous variable and one or more categorical variables (Doumont,
-[2009](#ref-Doumont:2009)). The collegiate earnings dataset fits this
-criteria, and we are interested in comparing the earnings of each
-demographic making a strip plot appropriate. The resulting graphic shows
-the distribution of the single quantitative variable (earnings) over the
-two categorical variables (ACT score and need amount), with two levels
-each (above and below average). None of the variables are time based, as
-those are best represented with different types of graphs.
+A strip plot is effective for comparing data with one continuous
+variable and one or more categorical variables (Doumont,
+[2009](#ref-Doumont:2009)). The resulting graphic shows the distribution
+of the single quantitative variable (earnings) over the categorical
+variables (financial-academic demographic) and school type, both with
+two levels (above and below average). None of the variables are time
+based, as those are best represented with different types of graphs.
+This graph uses the standard graphical theme; the rhetorical choices are
+discussed in
+[D2](https://github.com/severygb/portfolio-severyn-gabe/blob/master/reports/D2-report.md).
 
 Choosing the correct data to include in a report is incredibly important
 because “displays of evidence implicitly but powerfully define the scope
@@ -83,6 +83,11 @@ scores. Including the average values is also an ethical requirement;
 disclosing how categories were created means the author cannot hide
 misleading information.
 
+The yellow-blue color scheme is chosen to differentiate the two school
+types by color. The two colors maintain strong contrast through all
+types of colorblindness (tested with [this
+tool](https://www.color-blindness.com/coblis-color-blindness-simulator/)).
+
 This data set had very few missing values, visualized by the VIM
 package. The spine plot below looks at the four variables that make up
 the data displayed in the strip plot. Suprisingly, only the need
@@ -94,6 +99,17 @@ darkened panel for NF.
 With only 19 missing out of 706 observations (2.7%), incomplete
 observations were simply omitted with very little change to the
 graphical story.
+
+Data requirements: D1 distributions
+
+  - Minimum 200 observations of one quantitative variable
+  - One or two categorical variables
+  - Time is excluded as a variable
+  - Categorical variables
+      - If one category is used, it must have at least three levels for
+        a minimum of three comparisons.
+      - If two categories are used, they must have at least two levels
+        each for a minimum of four comparisons.
 
 ## References
 

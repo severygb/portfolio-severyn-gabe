@@ -1,4 +1,5 @@
-#this script is outdated now. Use D1 in carpentry and design for changes and updates.
+#this script is only used to produce missing values study
+
 
 library(readr)
 library(tidyverse)

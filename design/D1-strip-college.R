@@ -35,3 +35,5 @@ ggsave(filename = "/D1-college.png",
        height  = 4,
        units   = "in",
        dpi     = 300)
+
+#missing value plot is found in explore/D1-explore-missing-values.R
