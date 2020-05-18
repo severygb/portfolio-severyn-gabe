@@ -82,6 +82,26 @@ The source for data was complete, as there are no missing values in the
 published table. Therefore, nothing needed to be done to visualize or
 correct for missing values.
 
+There are several design choices implemented in the theme of the graph.
+This theme gives a consistent look to each graph in my portfolio, aiding
+professionalism and cohesiveness of the displays. It uses a white
+background (where the default is gray) to reduce non-data ink \[Tufte\].
+The font size for the title, labels, and caption are the same size and
+of the same font and color to reduce the visual distraction, and make
+the data prominent (Robbins,
+[2013](#ref-Robbins:2013a)[a](#ref-Robbins:2013a)). The theme includes
+(non-distracting) gridlines to facilitate numerical comparison across
+facets, such as in the multiway above. Both x and y axis scales are only
+written once, but the position of points in rows and columns is clear
+because of the consistent gridlines. This also enforces using the same
+scale for multiple panels, important to not present misleading graphics
+(Robbins, [2013](#ref-Robbins:2013b)[b](#ref-Robbins:2013b)). A title is
+included to restate the headline story of the graphic, emphasizing not
+what data is shown, but why that data is relevent to an argument.
+Lastly, a caption is included for sourcing of the data. Together, all of
+these choices make a more useful graph to the viewer and reduce the
+possibility of comitting rhetorical mistakes.
+
 ## References
 
 <div id="refs" class="references">
@@ -100,6 +120,22 @@ Dinu O and Ilie AM (2015) Maritime vessel obsolescence, life cycle cost
 and design service life. *IPO Conference Series: Material Science and
 Engineering* **95**
 <https://iopscience.iop.org/article/10.1088/1757-899X/95/1/012067/pdf>
+
+</div>
+
+<div id="ref-Robbins:2013a">
+
+Robbins N (2013a) General principles for creating effective graphs.
+*Creating More Effective Graphs*. Chart House, Wayne, NJ, 154–225
+<http://www.nbr-graphs.com/resources/recommended-books/>
+
+</div>
+
+<div id="ref-Robbins:2013b">
+
+Robbins N (2013b) Scales. *Creating More Effective Graphs*. Chart House,
+Wayne, NJ, 226–291
+<http://www.nbr-graphs.com/resources/recommended-books/>
 
 </div>
 
