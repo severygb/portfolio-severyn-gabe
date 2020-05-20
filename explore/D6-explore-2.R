@@ -54,6 +54,7 @@ area_transformed <- Fires_data %>%
 df <- area_transformed
 
 
+# using coplot I could not figure out how to get the median line in each panel
 my_panel <- function(x, y, subscripts, ...) {
   panel.smooth(x = x, y = y, span = 0.8, iter = 5, col.smooth = "blue")
   points(x = x, y = y, ...)
@@ -76,6 +77,24 @@ coplot(ISI ~ area | temp,
 
 # title(main = "Fires in Portugal")
 # dev.off()
+
+
+
+
+
+
+
+
+## ---------------------------------------------------
+# Trying to create a coplot in ggplot
+# successful, achieved everything I wanted except
+# we lost the panel showing the conditioning variable 
+# instead, the conditioning variable range is shown in the panel header
+
+
+
+
+
 
 
 # this function borrowed from 
@@ -120,9 +139,9 @@ df2 <- df_expanded %>%
   summarise(med_area = median(area)) 
 
 ggplot(df_expanded, aes(x = area, y = ISI)) +
-  geom_smooth(se = FALSE, span = 0.75, size = 0.5, color = rcb("dark_Br")) +
+  geom_smooth(se = FALSE, span = 0.75, size = 0.8, color = rcb("dark_BG")) +
   geom_vline(data = df2, aes(xintercept = med_area), linetype = "dashed") +
-  geom_point(size = 2, alpha = 0.5, color = rcb("dark_BG")) +
+  geom_point(size = 2, alpha = 0.4, color = rcb("dark_BG")) +
   facet_wrap(vars(interval), ncol = 1, as.table = FALSE) +
   coord_fixed(ratio = 1/((n_facet + 2) * 1.6)) +
   theme_graphclass() + 
