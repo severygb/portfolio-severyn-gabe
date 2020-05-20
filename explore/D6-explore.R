@@ -39,7 +39,7 @@ Fires_data <- read.csv(file = url, header = T, sep = ",") %>%
 
 
 area_transformed <- Fires_data %>%
-  mutate(area = log10(area*10000))
+  mutate(area = log10(area*10000)) #converts hectares to square meters
 
 # ggscatmat(area_transformed, columns = 5:13) +
 #   geom_point()  +
@@ -50,13 +50,28 @@ area_transformed <- Fires_data %>%
 
 png(file = "figures/D6-fires-coplot.png", width = 6, height = 6, units = "in", res = 300)
 
-# try a coplot
+par(c("cex.main" = "0.8", "cex.lab" = "0.8", "cex.axis" = "1", "adj" = "0.1"))
 
 coplot(ISI ~ area| temp, 
        data = area_transformed,
-       xlab = "Log(Burned Area), sq. m",
+       xlab = c("Log(Burned Area), sq. m", "Temperature deg. C"),
        ylab = "Initial Spread Index",
-       ylim = c(0, 25))
+       ylim = c(0, 25),
+       panel=function(x,y,...) {
+          points(x, y)
+          abline(v = median(area_transformed$area), lty = 2, col ="steelblue3") }
+       )
 title(main = "Fires in Portugal")
-
 dev.off()
+
+
+        
+        
+#works a treat        
+# coplot(ISI ~ area| temp, 
+#        data = area_transformed,
+#        xlab = "Log(Burned Area), sq. m",
+#        ylab = "Initial Spread Index",
+#        ylim = c(0, 25)
+# )
+# 
