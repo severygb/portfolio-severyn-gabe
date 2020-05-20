@@ -2,9 +2,10 @@
 #week 10 2020
 # I'm so close!
 
-library(tidyverse)
-library(magrittr)
+library("tidyverse")
+library("magrittr")
 library("GGally")
+library("graphclassmate")
 
 url <- "https://archive.ics.uci.edu/ml/machine-learning-databases/forest-fires/forestfires.csv"
 Fires_data <- read.csv(file = url, header = T, sep = ",") %>%
@@ -50,25 +51,84 @@ area_transformed <- Fires_data %>%
 # comment out the PNG function to see the figure in the plot pane
 # png(file = "figures/D6-fires-coplot-2.png", width = 6, height = 6, units = "in", res = 300)
 
+df <- area_transformed
 
+
+my_panel <- function(x, y, subscripts, ...) {
+  panel.smooth(x = x, y = y, span = 0.8, iter = 5, col.smooth = "blue")
+  points(x = x, y = y, ...)
+}
 coplot(ISI ~ area | temp, 
-       data = area_transformed,
-       xlab = c("Burned area (log m^2)", "Temperature (C)"),
+       data = df, 
+       pch = 16, 
+       subscripts = TRUE, 
+       panel = my_panel, 
+       xlab = c(expression(paste("Burned area, log(", m^2, ")")), 
+                "Temperature (C)"), 
        ylab = "Initial spread index (ISI)",
-       ylim = c(0, 25), 
-       panel = function(x, y, ...) {
-         panel.smooth(x, y, span = 0.8, iter = 5, col.smooth = "blue")
-         # abline(v = median(x)) # should work but not yet
-         }
+       ylim = c(0, 25)
 )
 
-# title(main = "Fires in Portugal")
 
+
+
+
+
+# title(main = "Fires in Portugal")
 # dev.off()
 
 
+# this function borrowed from 
+# https://jfukuyama.github.io/teaching/stat670/notes/lecture-11.html 
+# to set up ggplot to create coplot 
+make_coplot_df <- function(data_frame, faceting_variable, number_bins = 6) {
+  
+  ## co.intervals gets the limits used for the conditioning intervals
+  intervals = co.intervals(data_frame[[faceting_variable]], number = number_bins)
+  
+  ## indices is a list, with the ith element containing the indices of the
+  ## observations falling into the ith interval
+  indices = apply(intervals, 1, function(x)
+    which(data_frame[[faceting_variable]] <= x[2] & data_frame[[faceting_variable]] >= x[1]))
+  
+  ## interval_descriptions is formatted like indices, but has interval
+  ## names instead of indices of the samples falling in the index
+  interval_descriptions = apply(intervals, 1, function(x) {
+    num_in_interval = sum(data_frame[[faceting_variable]] <= x[2] & data_frame[[faceting_variable]] >= x[1])
+    interval_description = sprintf("%.0f to %.0f C", x[1], x[2])
+    return(rep(interval_description, num_in_interval))
+  })
+  
+  ## df_expanded has all the points we need for each interval, and the
+  ## 'interval' column tells us which part of the coplot the point should
+  ## be plotted in
+  df_expanded = data_frame[unlist(indices),]
+  df_expanded$interval = factor(unlist(interval_descriptions),
+                                levels = unique(unlist(interval_descriptions)), ordered = TRUE)
+  return(df_expanded)
+} 
 
 
+n_facet = 5
+df_expanded <- make_coplot_df(df, "temp", n_facet) %>% 
+  filter_all(all_vars(!is.infinite(.)))
+
+glimpse(df_expanded)
+
+df2 <- df_expanded %>%
+  group_by(interval) %>%
+  summarise(med_area = median(area)) 
+
+ggplot(df_expanded, aes(x = area, y = ISI)) +
+  geom_smooth(se = FALSE, span = 0.75, size = 0.5, color = rcb("dark_Br")) +
+  geom_vline(data = df2, aes(xintercept = med_area), linetype = "dashed") +
+  geom_point(size = 2, alpha = 0.5, color = rcb("dark_BG")) +
+  facet_wrap(vars(interval), ncol = 1, as.table = FALSE) +
+  coord_fixed(ratio = 1/((n_facet + 2) * 1.6)) +
+  theme_graphclass() + 
+  labs(x = expression(paste("Burned area, log(", m^2, ")")), 
+      y = "Initial spread index (ISI)", 
+      title = "Fires in Portugal")
 
 
 
