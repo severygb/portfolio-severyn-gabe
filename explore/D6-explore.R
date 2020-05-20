@@ -39,7 +39,7 @@ Fires_data <- read.csv(file = url, header = T, sep = ",") %>%
 
 
 area_transformed <- Fires_data %>%
-   mutate(area = log10(area))
+  mutate(area = log10(area*10000))
 
 # ggscatmat(area_transformed, columns = 5:13) +
 #   geom_point()  +
@@ -51,10 +51,12 @@ area_transformed <- Fires_data %>%
 png(file = "figures/D6-fires-coplot.png", width = 6, height = 6, units = "in", res = 300)
 
 # try a coplot
-coplot(FFMC ~ area| temp, 
-       data = area_transformed)
-#this actually has a story in it...
-    # as temperature increases, the upper limit of area burned increases
-    #FFMC and area have a slight positive correlation
+
+coplot(ISI ~ area| temp, 
+       data = area_transformed,
+       xlab = "Log(Burned Area), sq. m",
+       ylab = "Initial Spread Index",
+       ylim = c(0, 25))
+title(main = "Fires in Portugal")
 
 dev.off()
