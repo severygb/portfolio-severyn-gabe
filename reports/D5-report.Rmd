@@ -53,6 +53,8 @@ The goal of this display is to compare motorization rate across nations. The sim
 include_graphics("../figures/D5-dot-plot.png")    
 ```
 
+This dot plot includes data for both 2005 and 2015 separated by color. This displays the same data from the original's egregious red bubbles in a much better format. The viewer can easily discern how much each region has changed in the last ten years while also comparing across regions.
+
 A story that is also impossible to see in the chloropleth map is the large jump between the four highest regions and the rest. Australia, North America, Europe, Japan and South Korea all have strong vehicle manufacturing industries. Understandably, the countries where many vehicles are made consume vehicles above the global average rate. This plot has been banked to 45 degrees so the viewer can more easily see the slight break [@Robbins:2013b].
 
 Even this chart (made to correct lies) includes another lie: showing averages when the distribution is skewed [@Cairo:2018]. Puerto Rico and USA have the two highest motorization rates, but their region (NAFTA) has a smaller average, hiding this. The OICA realized this fact, because they wrote a selection of countries data individually. Unfortunately, a dot plot of all 141 countries is unreadable. Space constraints force the use of the smaller and more managable continential summary view.

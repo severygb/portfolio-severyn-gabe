@@ -71,15 +71,42 @@ ggsave(plot = map, filename = "D5-map.png",
 #dot plot
 dot_plot_data <- readRDS("data/D5-motorization-dot-plot-data.rds")
 
-dot_plot <- ggplot(dot_plot_data, aes(x = motor_rate2015, y = region)) +
+percent_change <- wrapr::build_frame(
+      "region",                         "change" |
+      "EU 28 countries + EFTA",         "9"      |
+      "Russia, Turkey & other Europe",  "59"     |
+      "NAFTA",                          "6"      |
+      "Central & South America",        "60"     |
+      "Asia/Oceania/Middle East",       "141"    |
+      "Africa",                         "35"     |
+      "Japan & South Korea",            "7"      |
+      "Australia & New Zealand",        "18.6"
+      ) %>%
+  mutate(change = as.numeric(change)/100) %>%
+  glimpse()
+
+#compute motorization rate in 2005 from change written on graphic
+#then pivot data to get year as a factor
+dot_plot_data %<>%
+  mutate(motor_rate2005 = motor_rate2015 / (1 + percent_change$change)) %>%
+  pivot_longer(cols = starts_with("motor_rate"),
+               names_to = "year",
+               names_prefix = "motor_rate",
+               names_ptypes = list(year = factor()),
+               values_to = "rate"
+               ) %>%
+    glimpse()
+
+dot_plot <- ggplot(dot_plot_data, aes(x = rate, y = region, color = year)) +
   geom_point(size = 2) +
   theme_graphclass() +
   theme(
     plot.margin = unit(c(0.1, 0.25, 0.1, 0), unit = "in")
   ) +
   labs(x = "Vehicles per 1000 people", y = "", caption = "Source: OICA",
-       title = "Motorization rate in 2015") +
-  scale_x_continuous(breaks = c(0,200,400,600,800))
+       title = "Motorization rate in 2015", color = "Legend") +
+  scale_x_continuous(breaks = c(0,200,400,600,800)) +
+  scale_color_brewer(type = "qual", palette = "Set2")
 
 dot_plot
 

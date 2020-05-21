@@ -94,6 +94,11 @@ variable across a categorical variable is best done with a dot chart
 
 <img src="../figures/D5-dot-plot.png" width="70%" />
 
+This dot plot includes data for both 2005 and 2015 separated by color.
+This displays the same data from the original’s egregious red bubbles in
+a much better format. The viewer can easily discern how much each region
+has changed in the last ten years while also comparing across regions.
+
 A story that is also impossible to see in the chloropleth map is the
 large jump between the four highest regions and the rest. Australia,
 North America, Europe, Japan and South Korea all have strong vehicle
