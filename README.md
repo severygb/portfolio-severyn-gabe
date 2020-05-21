@@ -33,7 +33,7 @@ equipment that prevents them.
 
 [Display 5](reports/D5-report.md) Global motorization rate
 
-[Display 6](reports/D6-report.md) Not yet
+[Display 6](reports/D6-report.md) Wildfire intensity
 
 ## Discussion notes
 

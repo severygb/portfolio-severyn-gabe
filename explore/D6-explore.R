@@ -48,7 +48,7 @@ area_transformed <- Fires_data %>%
 #         axis.text.x = element_text(angle = 90, hjust = 1))
 
 
-png(file = "figures/D6-fires-coplot.png", width = 6, height = 6, units = "in", res = 300)
+png(file = "figures/D6-fires-coplot-base.png", width = 6, height = 6, units = "in", res = 300)
 
 par(c("cex.main" = "0.8", "cex.lab" = "0.8", "cex.axis" = "1", "adj" = "0.1"))
 
@@ -64,6 +64,9 @@ coplot(ISI ~ area| temp,
 title(main = "Fires in Portugal")
 dev.off()
 
+# !
+#   See 'D6-explore-2' for a coplot in ggplot, used in report.
+# !
 
         
         

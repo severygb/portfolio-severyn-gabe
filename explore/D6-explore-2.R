@@ -3,7 +3,6 @@
 # I'm so close!
 
 library("tidyverse")
-library("magrittr")
 library("GGally")
 library("graphclassmate")
 
@@ -51,8 +50,6 @@ area_transformed <- Fires_data %>%
 # comment out the PNG function to see the figure in the plot pane
 # png(file = "figures/D6-fires-coplot-2.png", width = 6, height = 6, units = "in", res = 300)
 
-df <- area_transformed
-
 
 # using coplot I could not figure out how to get the median line in each panel
 my_panel <- function(x, y, subscripts, ...) {
@@ -69,12 +66,6 @@ coplot(ISI ~ area | temp,
        ylab = "Initial spread index (ISI)",
        ylim = c(0, 25)
 )
-
-
-
-
-
-
 # title(main = "Fires in Portugal")
 # dev.off()
 
@@ -94,6 +85,8 @@ coplot(ISI ~ area | temp,
 
 
 
+df <- area_transformed #area manually changed to log scale
+df_nolog <- Fires_data #let ggplot take care of the log scale
 
 
 
@@ -129,18 +122,20 @@ make_coplot_df <- function(data_frame, faceting_variable, number_bins = 6) {
 
 
 n_facet = 5
-df_expanded <- make_coplot_df(df, "temp", n_facet) %>% 
+df_expanded <- make_coplot_df(df, "temp", n_facet) %>%  # CHANGED TO EXPLORE LOG SCALE!
   filter_all(all_vars(!is.infinite(.)))
 
 glimpse(df_expanded)
 
 df2 <- df_expanded %>%
   group_by(interval) %>%
-  summarise(med_area = median(area)) 
+  summarise_at(vars(area), list(~median(.), ~min(.), ~max(.))) %>%
+  glimpse()
 
+#makes tall orientation
 ggplot(df_expanded, aes(x = area, y = ISI)) +
   geom_smooth(se = FALSE, span = 0.75, size = 0.8, color = rcb("dark_BG")) +
-  geom_vline(data = df2, aes(xintercept = med_area), linetype = "dashed") +
+  geom_vline(data = df2, aes(xintercept = median), linetype = "dashed") +
   geom_point(size = 2, alpha = 0.4, color = rcb("dark_BG")) +
   facet_wrap(vars(interval), ncol = 1, as.table = FALSE) +
   coord_fixed(ratio = 1/((n_facet + 2) * 1.6)) +
@@ -149,11 +144,23 @@ ggplot(df_expanded, aes(x = area, y = ISI)) +
       y = "Initial spread index (ISI)", 
       title = "Fires in Portugal")
 
+#switch to wide orientation
+ggplot(df_expanded, aes(x = ISI, y = area)) +
+  geom_hline(data = df2, aes(yintercept = median), linetype = "dashed", size = 0.6) +
+  geom_hline(data = df2, aes(yintercept = min), linetype = "twodash", colour = rcb("dark_Br"), size = 0.6) +
+  geom_hline(data = df2, aes(yintercept = max), linetype = "twodash", color = rcb("dark_Br"), size = 0.6) +
+  geom_point(size = 2, alpha = 0.4, color = rcb("dark_BG")) +
+  facet_wrap(vars(interval), ncol = 5, as.table = FALSE) +
+  coord_fixed(ratio = 8) +
+  theme_graphclass() + 
+  labs(y = expression(paste('Burned area, log'[10]*'(m'^2*')')), 
+       x = "Initial spread index (ISI)", 
+       title = "Initial Spread Index does not predict fire damage")
 
-
-
-
-
-
-
-
+ggsave("D6-fires-coplot-ggplot.png",
+      path    = "figures",
+      width   = 8,
+      height  = 3,
+      units   = "in",
+      dpi     = 300
+      )
