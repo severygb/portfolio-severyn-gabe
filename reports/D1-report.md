@@ -1,8 +1,6 @@
 Demographics do not predict earnings at US colleges
 ================
 
-## Story
-
 College earnings are not strongly predicted by the demographics of
 students entering schools.
 

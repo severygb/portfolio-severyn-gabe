@@ -43,13 +43,13 @@ events happened during the time.
 Several of the safety improvements are a direct result of a fatal
 accident driving action. In 1958 Pat O’Connor lost his life in major car
 pile-up at the Indianapolis 500. The very next year roll over hoops were
-mandated \[Nye:2017\]. There is a spike followed by continual decline in
-fatalities at the turn of the 21st century. A string of high-profile
-deaths including Dale Earnheardt and Adam Petty prompted a massive
-response from the racing community to make changes. HANS devices were
-mandated in NASCAR as a direct result of Earnheardt, since the device
-directly prevents the type of skull fracture he suffered (Tyler,
-[2006](#ref-Tyler:2006)).
+mandated (Nye, [2017](#ref-Nye:2017)). There is a spike followed by
+continual decline in fatalities at the turn of the 21st century. A
+string of high-profile deaths including Dale Earnheardt and Adam Petty
+prompted a massive response from the racing community to make changes.
+HANS devices were mandated in NASCAR as a direct result of Earnheardt,
+since the device directly prevents the type of skull fracture he
+suffered (Tyler, [2006](#ref-Tyler:2006)).
 
 There is a story here that this graph does not address - the data I
 obtained makes no distinction between professional and amateur drivers.

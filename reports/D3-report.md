@@ -1,4 +1,4 @@
-Price and fuel economy are mutually exclusive
+Low price and high fuel economy are mutually exclusive
 ================
 
 There is a strongly inverse correlation between vehicle price and
@@ -63,7 +63,9 @@ are ancillary variables, included for context and to further the story
 but they play second fiddle to the scatterplot correlation.
 
 Both factors are ordered by economy, which easily shows which style and
-brand are the most efficient. Who said “order by the data”?
+brand are the most efficient. Ordering the panels by increasing median
+economy is more effective than ordering the styles alphabetically
+(Robbins, [2013](#ref-Robbins:2013b)).
 
 This graphic uses the standard theme as discussed in the [D2
 report](https://github.com/severygb/portfolio-severyn-gabe/blob/master/reports/D2-report.md).
@@ -116,6 +118,14 @@ Belgium, 133–143 <http://www.treesmapsandtheorems.com/>
 
 Dua D and Graff C (2017) UCI machine learning repository automobile data
 set. <https://archive.ics.uci.edu/ml/datasets/Automobile>
+
+</div>
+
+<div id="ref-Robbins:2013b">
+
+Robbins N (2013) Scales. *Creating More Effective Graphs*. Chart House,
+Wayne, NJ, 226–291
+<http://www.nbr-graphs.com/resources/recommended-books/>
 
 </div>
 

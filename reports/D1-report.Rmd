@@ -15,8 +15,6 @@ opts_chunk$set(echo = TRUE)
 #sometimes this is necessary: pandoc_args: "--webtex=https://latex.codecogs.com/png.latex?"
 ```
 
-## Story
-
 College earnings are not strongly predicted by the demographics of students entering schools.
 
 This dataset is derived from MONEY's best college rankings [@DASL]. This is an annual study done on colleges in the US focusing on identifying schools that offer the most value, as well as top performers in various academic metrics. Each datapoint is one of the 706 four-year colleges MONEY studied that year, which are colleges in the Unites States meeting a [few criteria](https://money.com/how-money-ranks-best-colleges-2019/) [@MONEY:2019]. 
