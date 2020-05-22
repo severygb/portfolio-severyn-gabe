@@ -125,7 +125,7 @@ final_img <- image_composite(final_img, subtitle_text, offset = "+80+40")
 
 final_img
 
-finished_path <- "figures/D6-complete.png"
+finished_path <- "figures/D4-complete.png"
 image_write(final_img, path = finished_path, format = "png")
 
 
