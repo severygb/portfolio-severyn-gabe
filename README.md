@@ -1,24 +1,28 @@
-README
+Portfolio Home - GS
 ================
 
-![](resources/rally-scaled.jpg) <small> <br>
-<i>RallyFinland2015-Mokkiperra\_82</i> by Alles Photos is licensed under
-<a href="https://creativecommons.org/licenses/by-nc/2.0/">CC0 BY-NC
+![](resources/cm402-header.png) <small> <br> <i>Lastfm Graph</i> by
+kjell is licensed under
+<a href="https://creativecommons.org/licenses/by-sa/2.0/0/">CC BY-SA
 2.0</a> <br> </small>
 
 # Portfolio of data displays
 
 This portfolio showcases my skill in clear data visualization and
-ethical visual rhetoric.
+ethical visual rhetoric. It is the culmination of my work in the class
+ME447 Visualising Data. Each display required creating one or more
+graphics and writing an essay on the data characteristics and my
+decisions on how to graph it effectively. This class focused on visual
+rhetoric, which is essentially the process of tailoring graphic
+decisions to your audience with the goals of clarity and truthfulness.
 
-Gabe Severyn - May 2020
+Gabe Severyn - June 2020
 
 ## Displays and critiques
 
 [Display 1](reports/D1-report.md) Student demographics and post
-graduation earnings at US colleges  
-This strip plot explores the demographics entering US colleges and their
-earnings.
+graduation earnings at US colleges This strip plot explores the
+demographics entering US colleges and their earnings
 
 [Display 2](reports/D2-report.md) US commercial vessels are antiquated A
 multiway reveals a much stronger story than a data table
@@ -29,21 +33,10 @@ these two variables
 
 [Display 4](reports/D4-report.md) Motorsports safety improvements are
 accelerating An ethical display of fatalities in racing, and the
-equipment that prevents them.
+equipment that prevents them
 
-[Display 5](reports/D5-report.md) Global motorization rate
-
-[Display 6](reports/D6-report.md) Wildfire intensity
-
-## Discussion notes
-
-[Reading responses](reports/reading-responses.md) Notes from the data
-graphics literature on elements of design and visual rhetoric.
-
-## Presentation notes
-
-[Presentation responses](reports/presentation-prompts.md) Notes from the
-data graphics literature on elements of design and visual rhetoric.
+[Display 5](reports/D5-report.md) Motorization rate disparity Stripping
+away visual complexity in search of lessons in the data
 
 [Reflections on Rhetoric](reports/reflections-on-rhetoric.md) Writing
 responses and lessons learned from rhetorical presentations.

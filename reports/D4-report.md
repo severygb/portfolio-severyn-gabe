@@ -12,9 +12,9 @@ scientific manner in the 1990’s, furthering technology for safety
 improvements and studying how to mitigate risks for drivers, crew
 members, and spectators (Tyler, [2006](#ref-Tyler:2006)). It took
 decades of dangerous competition and major improvements in technology
-before the global community coalesced around safety for specatators and
+before the global community coalesced around safety for spectators and
 participants. This hundred-odd years of data represents the lives of
-drivers, spectators, crew members, safety personel, and officals who
+drivers, spectators, crew members, safety personnel, and officials who
 lost their life in a motorsports incident.
 
 <img src="../figures/D4-complete.png" width="100%" />
@@ -24,7 +24,7 @@ in the US. Motor racing is a global sport so there are thousands of
 individuals and hundreds of race series that are not accounted here. The
 vast majority of individuals killed in the sport are drivers but
 incidents can happen anywhere on and off track. Small numbers of rescue
-personel, team members, and fans are part of this dataset, but every
+personnel, team members, and fans are part of this data set, but every
 loss of life is equal in weight and must be included in safety
 considerations.
 
@@ -69,14 +69,6 @@ protocols for crash safety and fire prevention.
 
 ## Graph design
 
-Data requirements
-
-  - Minimum 20 observations
-  - One quantitative variable conveying information about human injury
-    or fatality
-  - One or two categorical variables, one of which can be time (time
-    series)
-
 A line graph is appropriate for this data because it shows the evolution
 of a variable over time (Doumont, [2009](#ref-Doumont:2009)). The
 variable is not continuous, rather it is discreet over each year. Points
@@ -99,7 +91,7 @@ gear. This picture immediately conveys the individuality of lives lost,
 showing ‘who’ is affected by this injurious data (Dragga and Voss,
 [2001](#ref-Dragga+Voss:2001)). Someone who suffered for their passion,
 who participated in a dangerous sport because they loved the feelings,
-competition, or community invloved. The man solemly gazing away imparts
+competition, or community invloved. The man solemnly gazing away imparts
 a variety of emotions to viewers. Anyone personally involved in
 motorsports will recognize the scene: the moment of calm right before
 the race starts and chaos has the potential to arise.

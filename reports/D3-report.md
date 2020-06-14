@@ -49,13 +49,6 @@ there are more questions than answers.
 
 ## Graph design
 
-Data requirements
-
-  - Minimum 100 observations
-  - Two quantitative variables
-  - One categorical variable with at least 5 levels
-  - Time is excluded as a variable
-
 A scatterplot is appropriate for this data because the main interest is
 showing the correlation between two continuous quantitative varibles
 (Doumont, [2009](#ref-Doumont:2009)). Body style and country of origin
@@ -97,7 +90,7 @@ change the visual story.
 
 The few problematic observations are omitted from the graph.
 
-Pulled from a repositoty for machine learning, this data set strongly
+Pulled from a repository for machine learning, this data set strongly
 resembles the mtcars data included in R. This was not intentional, I
 just sought out data on cars because that’s what I am interested in, and
 found the similarity through tutorials that used mtcars.

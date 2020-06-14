@@ -1,5 +1,5 @@
 ---
-title: "Global motorization rate"
+title: "Motorization rate disparity"
 output: 
   github_document: 
     pandoc_args: "--webtex"
@@ -60,14 +60,5 @@ A story that is also impossible to see in the chloropleth map is the large jump 
 Even this chart (made to correct lies) includes another lie: showing averages when the distribution is skewed [@Cairo:2018]. Puerto Rico and USA have the two highest motorization rates, but their region (NAFTA) has a smaller average, hiding this. The OICA realized this fact, because they wrote a selection of countries data individually. Unfortunately, a dot plot of all 141 countries is unreadable. Space constraints force the use of the smaller and more managable continential summary view.
 
 Put together, the global map and dot plot show a more detailed story, depicting the wide spread between nations as well as the fine distinctions between continents. 
-
-
-**Data requirements**
-
-D5 - correcting a graphical lie
-
-- Minimum 20 observations
-- One quantitative variable
-- Categories are optional, depending on the data
 
 ## References

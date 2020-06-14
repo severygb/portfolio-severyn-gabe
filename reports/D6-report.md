@@ -55,13 +55,6 @@ terrain the factors to predict fire damage are likely different.
 
 ## Graph design
 
-Data requirements: D6 multivariate
-
-  - Minimum 20 observations
-  - Three or more quantitative variables
-  - Time is excluded as a variable
-  - Categorical variables are possible, depending on the graph type.
-
 A conditional plot is appropriate for this data set because it explores
 the correlation or dependence between three continuous quantitative
 variables. Burned area (the ‘output’ variable) is placed on the y-axis
@@ -69,10 +62,10 @@ to facilitate easier comparison across the horizontal array of panels
 with a common vertical axis (Wainer, [2000](#ref-Wainer:2000)).
 
 Like all of the other plots in this portfolio, it uses the
-graphclassmate package for consistency and emphazising the data.
-Detailed discuttion of this theme is found in the [D2
+graphclassmate package for consistency and emphasizing the data.
+Detailed discussion of this theme is found in the [D2
 report](https://github.com/severygb/portfolio-severyn-gabe/blob/master/reports/D2-report.md).
-The median and min and max lines in each panel use different linetypes
+The median and min and max lines in each panel use different line types
 and colors to ensure the lines are not confused. There is no legend
 included to explain minimum and maximum lines because their position
 bounding the data range is inherently clear. Since there is significant

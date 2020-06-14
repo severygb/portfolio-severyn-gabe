@@ -13,13 +13,13 @@ library(knitr)
 opts_chunk$set(echo = TRUE)
 ```
 
-There are three primary threats to a race car driver: high g-load, object intrusion, and fire [@Smith:2019]. Most types of injuries are caused by accidents involving these threats and improvements in safety technology primarily target them. Automobile racing is a recent sport; a popular saying is the first race occurred shortly after the creation of the second car. However, the global motorsports community only began to look at crashes and injuries in a scientific manner in the 1990's, furthering technology for safety improvements and studying how to mitigate risks for drivers, crew members, and spectators [@Tyler:2006]. It took decades of dangerous competition and major improvements in technology before the global community coalesced around safety for specatators and participants. This hundred-odd years of data represents the lives of drivers, spectators, crew members, safety personel, and officals who lost their life in a motorsports incident.
+There are three primary threats to a race car driver: high g-load, object intrusion, and fire [@Smith:2019]. Most types of injuries are caused by accidents involving these threats and improvements in safety technology primarily target them. Automobile racing is a recent sport; a popular saying is the first race occurred shortly after the creation of the second car. However, the global motorsports community only began to look at crashes and injuries in a scientific manner in the 1990's, furthering technology for safety improvements and studying how to mitigate risks for drivers, crew members, and spectators [@Tyler:2006]. It took decades of dangerous competition and major improvements in technology before the global community coalesced around safety for spectators and participants. This hundred-odd years of data represents the lives of drivers, spectators, crew members, safety personnel, and officials who lost their life in a motorsports incident.
 
 ```{r echo = FALSE, out.width = "100%"}   
 include_graphics("../figures/D4-complete.png")    
 ```
 
-This data only includes car and truck racing (not motorcycles or boats) in the US. Motor racing is a global sport so there are thousands of individuals and hundreds of race series that are not accounted here. The vast majority of individuals killed in the sport are drivers but incidents can happen anywhere on and off track. Small numbers of rescue personel, team members, and fans are part of this dataset, but every loss of life is equal in weight and must be included in safety considerations.
+This data only includes car and truck racing (not motorcycles or boats) in the US. Motor racing is a global sport so there are thousands of individuals and hundreds of race series that are not accounted here. The vast majority of individuals killed in the sport are drivers but incidents can happen anywhere on and off track. Small numbers of rescue personnel, team members, and fans are part of this data set, but every loss of life is equal in weight and must be included in safety considerations.
 
 Some of the most influential and effective safety advances are highlighted for context. There is an accelerating rate in safety advances; very few improvements happened before the 1950's but so many occurred in the past 20 years they could not be labeled. This follows the rate of technological advances in the information age. The improvements labeled directly address the three primary threats in motorsports accidents.
 
@@ -33,17 +33,11 @@ There is a story here that this graph does not address - the data I obtained mak
 
 ## Graph design
  
-Data requirements
-
-- Minimum 20 observations
-- One quantitative variable conveying information about human injury or fatality
-- One or two categorical variables, one of which can be time (time series)
-
 A line graph is appropriate for this data because it shows the evolution of a variable over time [@Doumont:2009]. The variable is not continuous, rather it is discreet over each year. Points are real data while the line is just connecting the dots, but the line is easily "understood as connected, but not interpolated, by the line" [@Doumont:2009]. Markers are not displayed at each point to keep ink to a minumum and fit the simple and somber theme. Human suffering is the central focus, not comparing data points or reducing lives to statistics [@Dragga+Voss:2001].
 
 Normalizing the fatalities would be more appropriate in this case because it would account for the changing number of participants. That number likely varies widely between 1902 and 2019, however I was not able find data for the number of participants across all racing types and series to match context with the fatalities data.
 
-The first thing the viewer sees the man in a racing helmet and safety gear. This picture immediately conveys the individuality of lives lost, showing 'who' is affected by this injurious data [@Dragga+Voss:2001]. Someone who suffered for their passion, who participated in a dangerous sport because they loved the feelings, competition, or community invloved. The man solemly gazing away imparts a variety of emotions to viewers. Anyone personally involved in motorsports will recognize the scene: the moment of calm right before the race starts and chaos has the potential to arise. 
+The first thing the viewer sees the man in a racing helmet and safety gear. This picture immediately conveys the individuality of lives lost, showing 'who' is affected by this injurious data [@Dragga+Voss:2001]. Someone who suffered for their passion, who participated in a dangerous sport because they loved the feelings, competition, or community invloved. The man solemnly gazing away imparts a variety of emotions to viewers. Anyone personally involved in motorsports will recognize the scene: the moment of calm right before the race starts and chaos has the potential to arise. 
 
 The image fades to white beneath the figure with the goal of showing they are inseparable. Great care was taken to make sure the data lines, grid lines, and annotation rectangles do not visually conflict, but rather integrate into a cohesive and "mutually illuminative" display [@Stroupe:2000].
 

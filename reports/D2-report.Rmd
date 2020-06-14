@@ -33,14 +33,6 @@ The third section of the table is relevent- the median age of vessel types. Perh
 
 ## Graph design
 
-Data requirements:
-
-- One quantitative variable with a minimum of 24 observations
-- Two independent categorical variables with one of the following combinations,
-  - 3 levels in category 1 and at least 8 levels in category 2
-  - 4 levels in category 1 and at least 6 levels in category 2
-  - 5 levels in category 1 and at least 5 levels in category 2
-
 A multiway is appropriate because this data consists of a single quantitative value with two categorical variables. The original data is presented in percentage form; this allows easy comparison of the age within a single type, but inhibits comparison between types. To facilitate this, I converted the data to raw counts. This involved difficult data wrangling, because the totals of each type were presented in a separate row.
 
 The plots use a log scale, because the counts span three orders of magnitude. This scale allows visual differentiation of the smaller values. Labels for numbers of vessels are sparse enough to read as full numbers with no overprinting, and are formatted with commas for immediate readability. The age category is ordered in increasing order, as it is a numerical variable. Ordering the age categories in any other way would cause confusion. 

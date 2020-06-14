@@ -46,15 +46,6 @@ only mentioning the size of the fleet decreased between 2000 and 2014
 
 ## Graph design
 
-Data requirements:
-
-  - One quantitative variable with a minimum of 24 observations
-  - Two independent categorical variables with one of the following
-    combinations,
-      - 3 levels in category 1 and at least 8 levels in category 2
-      - 4 levels in category 1 and at least 6 levels in category 2
-      - 5 levels in category 1 and at least 5 levels in category 2
-
 A multiway is appropriate because this data consists of a single
 quantitative value with two categorical variables. The original data is
 presented in percentage form; this allows easy comparison of the age

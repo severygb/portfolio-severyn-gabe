@@ -1,4 +1,4 @@
-Global motorization rate
+Motorization rate disparity
 ================
 
 The International Organization of Motor Vehicle Manufactures provides
@@ -119,14 +119,6 @@ and more managable continential summary view.
 Put together, the global map and dot plot show a more detailed story,
 depicting the wide spread between nations as well as the fine
 distinctions between continents.
-
-**Data requirements**
-
-D5 - correcting a graphical lie
-
-  - Minimum 20 observations
-  - One quantitative variable
-  - Categories are optional, depending on the data
 
 ## References
 

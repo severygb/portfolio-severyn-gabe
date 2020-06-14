@@ -28,17 +28,10 @@ Initial spread index is a metric included in the Canadian forest fire weather in
 This data represents the factors relevant to the geographic area in the Montesinho park. There may be variables specific to that area that drive the observed relationship, so these conclusions likely can't be extended to other geography or climates. In other regions with vastly different terrain the factors to predict fire damage are likely different.
 
 ## Graph design
- 
-Data requirements: D6 multivariate
-
-- Minimum 20 observations
-- Three or more quantitative variables
-- Time is excluded as a variable
-- Categorical variables are possible, depending on the graph type.
 
 A conditional plot is appropriate for this data set because it explores the correlation or dependence between three continuous quantitative variables. Burned area (the 'output' variable) is placed on the y-axis to facilitate easier comparison across the horizontal array of panels with a common vertical axis [@Wainer:2000]. 
 
-Like all of the other plots in this portfolio, it uses the graphclassmate package for consistency and emphazising the data. Detailed discuttion of this theme is found in the [D2 report](https://github.com/severygb/portfolio-severyn-gabe/blob/master/reports/D2-report.md). The median and min and max lines in each panel use different linetypes and colors to ensure the lines are not confused. There is no legend included to explain minimum and maximum lines because their position bounding the data range is inherently clear. Since there is significant clustering of fire data points, a transparency argument is added to show the density of points rather than a jittering effect, which would distort the continuous quantitative data [@Wilke:2018].
+Like all of the other plots in this portfolio, it uses the graphclassmate package for consistency and emphasizing the data. Detailed discussion of this theme is found in the [D2 report](https://github.com/severygb/portfolio-severyn-gabe/blob/master/reports/D2-report.md). The median and min and max lines in each panel use different line types and colors to ensure the lines are not confused. There is no legend included to explain minimum and maximum lines because their position bounding the data range is inherently clear. Since there is significant clustering of fire data points, a transparency argument is added to show the density of points rather than a jittering effect, which would distort the continuous quantitative data [@Wilke:2018].
 
 Burned area is highly skewed to smaller values as small fires are much more common than large fires. A log scale is employed for the y-axis because it better represents the distribution [@Robbins:2013b].
 

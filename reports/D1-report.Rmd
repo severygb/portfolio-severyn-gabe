@@ -50,13 +50,4 @@ include_graphics("../figures/D1-missing-values.png")
 
 With only 19 missing out of 706 observations (2.7%), incomplete observations were simply omitted with very little change to the graphical story.
 
-Data requirements: D1 distributions
-
-- Minimum 200 observations of one quantitative variable
-- One or two categorical variables
-- Time is excluded as a variable
-- Categorical variables
-    - If one category is used, it must have at least three levels for a minimum of three comparisons.
-    - If two categories are used, they must have at least two levels each for a minimum of four comparisons.
-
 ## References
