@@ -16,6 +16,11 @@ decisions on how to graph it effectively. This class focused on visual
 rhetoric, which is essentially the process of tailoring graphic
 decisions to your audience with the goals of clarity and truthfulness.
 
+All of the work done here is using R, a programming language for data
+manipulation and visualization. At the beginning of this class I di not
+know what R was, and at the end I am proficient in using it and have
+created all the displays below.
+
 Gabe Severyn - June 2020
 
 ## Displays and critiques
@@ -37,6 +42,3 @@ equipment that prevents them
 
 [Display 5](reports/D5-report.md) Motorization rate disparity Stripping
 away visual complexity in search of lessons in the data
-
-[Reflections on Rhetoric](reports/reflections-on-rhetoric.md) Writing
-responses and lessons learned from rhetorical presentations.
