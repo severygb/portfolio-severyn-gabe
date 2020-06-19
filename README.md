@@ -1,12 +1,10 @@
-Portfolio Home - GS
+Portfolio of Data Displays
 ================
 
 ![](resources/cm402-header.png) <small> <br> <i>Lastfm Graph</i> by
 kjell is licensed under
 <a href="https://creativecommons.org/licenses/by-sa/2.0/0/">CC BY-SA
 2.0</a> <br> </small>
-
-# Portfolio of data displays
 
 This portfolio showcases my skill in clear data visualization and
 ethical visual rhetoric. It is the culmination of my work in the class
@@ -17,7 +15,7 @@ rhetoric, which is essentially the process of tailoring graphic
 decisions to your audience with the goals of clarity and truthfulness.
 
 All of the work done here is using R, a programming language for data
-manipulation and visualization. At the beginning of this class I di not
+manipulation and visualization. At the beginning of this class I did not
 know what R was, and at the end I am proficient in using it and have
 created all the displays below.
 
